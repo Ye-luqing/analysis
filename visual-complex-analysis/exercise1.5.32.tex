@@ -1,0 +1,91 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.32}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+  证明当 $n=2m$ 为偶数时,
+$$
+{2m\choose 1}-{2m\choose 3}+{2m\choose 5}-\cdots+(-1)^{m+1}{2m\choose
+  2m-1}=2^m\sin (\frac{m\pi}{2}).
+$$
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+我们发现,$2^m\sin (\frac{m\pi}{2})$ 是复数 $2^me^{\frac{m\pi i}{2}}$ 的
+虚部.而
+  \begin{align*}
+    2^me^{\frac{m\pi i}{2}}&=(1+i)^{2m}\\&=\sum_{k=1}^m {m\choose k}i^k.
+  \end{align*}
+然后把实部虚部分离就可以得出题目中的结论.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+
+我们发现,$2^m\sin (\frac{m\pi}{2})$ 是复数 $2^me^{\frac{m\pi i}{2}}$ 的
+虚部.下面我们来研究复数序列 $(2^me^{\frac{m\pi
+    i}{2}})_{m=1}^{\infty}$,将序列中的各点标在复平面上,如下图所示.\\
+\psset{xunit=1.0cm,yunit=1.0cm}
+\begin{pspicture*}(-10.08,-7.5)(14.02,3.24)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-10.08,-7.5)(14.02,3.24)
+\psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=2,Dy=2,ticksize=-2pt 0,subticks=2]{->}(0,0)(-20.16,-15.01)(28.05,6.49)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,0)
+\rput[bl](1.16,0.21){\blue{$a_0$}}
+\psdots[dotstyle=*,linecolor=blue](0,2)
+\rput[bl](0.13,2.22){\blue{$a_1$}}
+\psdots[dotstyle=*,linecolor=blue](-4,0)
+\rput[bl](-3.86,0.21){\blue{$a_2$}}
+\psdots[dotstyle=*,linecolor=blue](0,-8)
+\rput[bl](0.13,-7.81){\blue{$a_3$}}
+\psdots[dotstyle=*,linecolor=blue](16,0)
+\rput[bl](16.15,0.21){\blue{$a_4$}}
+\end{scriptsize}
+\end{pspicture*}
+我们发现,这些复数的虚部的变化规律是
+$$
+0\to 2\to 0\to -8\to 0\to 32\to\cdots
+$$

@@ -1,0 +1,95 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题2.9.3}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}[2.9.3]
+考虑一族映射
+$$
+z\to M_a(z)=\frac{z-a}{\overline{a}z-1},
+$$
+其中 $a$ 是常数.
+\begin{enumerate}
+\item 证明 $M_a[M_a(z)]=z$.换言之,$M_a$ 是自逆的.
+
+\begin{proof}[\textbf{证明}]
+  \begin{align*}
+    M_a[M_a(z)]&=\frac{\frac{z-a}{\overline{a}z-1}-a}{\overline{a}\frac{z-a}{\overline{a}z-1}-1}\\&=\frac{z-a-a(\overline{a}z-1)}{\overline{a}(z-a)-(\overline{a}z-1)}\\&=\frac{z-|a|^2z}{1-|a|^2}\\&=z.
+  \end{align*}
+\end{proof}
+\item 证明 $M_a(z)$ 映单位圆周为其自身.
+  \begin{proof}[\textbf{证明}]
+我们来计算
+\begin{align*}
+  \left| \frac{z-a}{\overline{a}z-1}\right|^{2}&=\frac{|z-a|^{2}}{|\overline{a}z-1|^{2}}\\&=\frac{(z-a)(\overline{z}-\overline{a})}{(\overline{a}z-1)(a\overline{z}-1)}\\&=\frac{|z|^2-z\overline{a}-a\overline{z}+|a|^2}{|a|^2|z|^2-\overline{a}z-a\overline{z}+1}.
+\end{align*}
+当 $|z|=1$ 时,上式变为
+$$
+\frac{1-z\overline{a}-a\overline{z}+|a|^2}{|a|^2-\overline{a}z-a\overline{z}+1}=1.
+$$
+命题得证.
+  \end{proof}
+  \item 证明若 $a$ 位于单位圆盘内,则 $M_a(z)$映单位圆盘为其自身.
+  \begin{proof}[\textbf{证明}]
+  我们来看
+  \begin{align*}
+    \left|\frac{z-a}{\overline{a}z-1}\right|^2=\frac{|z|^2-z\overline{a}-a\overline{z}+|a|^2}{|a|^2|z|^2-\overline{a}z-a\overline{z}+1},
+  \end{align*}
+当 $|a|,|z|\leq 1$ 时,我们来证明
+$$
+|z|^2-z\overline{a}-a\overline{z}+|a|^2\leq |a|^2|z|^2-\overline{a}z-a\overline{z}+1.
+$$
+也就是证明
+$$
+|z|^2(1-|a|^2)\leq 1-|a|^2.
+$$
+这是显然的.
+  \end{proof}
+\end{enumerate}
+\end{exercise}
+\end{document}
+
+
+
+
+
+
+
+

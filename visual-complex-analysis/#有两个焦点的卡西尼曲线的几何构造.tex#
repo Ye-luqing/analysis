@@ -1,0 +1,173 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry,epigraph}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\usepackage{tgchorus}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=FZFangSong-Z02S]{FZFangSong-Z02S}
+\setlength{\epigraphwidth}{0.8\textwidth}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\bf{从卡西尼曲线的光滑性到最大模原理}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,数
+      学112,学号:1002011005}}}
+\maketitle
+现在我们用几何的方法来研究有两个焦点的卡西尼曲线.类似的研究手段在伟大
+的Newton的《自然哲学的数学原理》里大量采用,在那本书里,牛顿主要使用欧氏平面几何
+结合其所创立的微积分来解释一个运动的世界.Tritan Needham 所著的
+\textit{Visual Complex Analysis} 也大量地采用了这种几何的方法,这本书有
+中译本,叫 《复分析——可视化方法》,由齐民友先生翻译.\\
+
+所谓有两个焦点的卡西
+尼曲线,就是平面上满足到两个定点的距离乘积等于定值这个条件的所有点形成
+的集合,且定值为正.两个定点叫做焦点.\\
+
+
+如图\eqref{fig:1},设点 $C$ 是某一条卡西尼曲线上
+的任意一点,$A,B$ 是该卡西尼曲线的焦点.则易得当点 $C$ 沿着两个圆周的任意一个
+圆周运动时,都不可能继续保持在同一条卡西尼曲线上.当点 $C$ 进入深蓝色和
+淡蓝色箭头所指的区域内部时,也不可能继续保持在同一条卡西尼曲线上.当点 $C$ 进入红色箭头或者绿
+色箭头所指的区域内部时,才有可能保持在同一条卡西尼曲线上.
+\iffalse
+下面我们来论证,必
+定存在某条路径,使得当 $C$ 沿着这条路径进入红色或绿色箭头所指的区域
+时,仍然保持在同一条卡西尼曲线上.这是因为,当 $C$ 沿着以 $B$ 为中心的圆弧顺时针
+运动时,必然会进入另外的卡西尼曲线,该卡西尼曲线上的点到 $A,B$ 的距离乘
+积的值大于 $|AC||BC|$.当 $C$ 沿着以 $A$ 为中心的圆顺时针运动时,必然也
+会进入另外的卡西尼曲线,该卡西尼曲线上的点到 $A,B$ 的距离乘积的值小于
+$|AC||BC|$.因此必然存在夹在两个圆弧之间的路径,使得点 $C$ 沿着该路径运
+动时会保持在同一条卡西尼曲线上.
+\fi
+\begin{figure}[h]
+\newrgbcolor{ffttqq}{1 0.2 0}
+\newrgbcolor{qqccqq}{0 0.8 0}
+\newrgbcolor{qqqqcc}{0 0 0.8}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-6.54,-6.48)(15.78,5.7)
+\pscircle(-1.36,-0.82){3.52}
+\pscircle(3.42,-0.72){4.36}
+\psline[linecolor=ffttqq]{->}(0.28,2.3)(1.32,2.56)
+\psline[linecolor=qqccqq]{->}(0.28,2.3)(-1.24,2.34)
+\psline[linecolor=qqqqcc]{->}(0.28,2.3)(0.2,3.48)
+\psline[linecolor=cyan]{->}(0.28,2.3)(0.2,1.4)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](-1.36,-0.82)
+\rput[bl](-1.9,-1.18){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](3.42,-0.72)
+\rput[bl](3.88,-1.08){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](0.28,2.3)
+\rput[bl](0,2.74){\blue{$C$}}
+\end{scriptsize}
+\end{pspicture*}
+\caption{}\label{fig:1}
+\end{figure}
+
+
+更具体地,设 $|AC|=a,|BC|=b$,则当点 $C$ 稍微运动,变成 $C'$ 后, $C'$
+和 $C$ 不是同一点,且在同一条卡西尼曲线上,令
+$$
+|AC'|=a+\va_1,|BC'|=b+\va_2.
+$$
+易得 $\va_1,\va_2$ 都不为 $0$.且我们有
+$$
+|AC'||BC'|=|AC||BC|,
+$$
+则
+$$
+(a+\va_1)(b+\va_2)-ab=a\va_2+b\va_1+\va_1\va_2=0.
+$$
+则
+$$
+a \frac{\va_2}{\va_1}+b+\va_2=0.
+$$
+于是,
+\begin{equation}\label{eq:2}
+\lim_{\va_1\to 0;\va_1\neq 0} \frac{\va_2}{\va_1}=\frac{-b}{a}.
+\end{equation}
+可见,$\va_1,\va_2$ 异号.这样就解释了在图 \eqref{fig:1} 中为什么 $C$ 只
+有向红色或绿色箭头运动才可能保持在同一条卡西尼曲线上.\\
+
+从 $C$ 运动到 $C'$ 的意义也可以展示成图\eqref{fig:2}.其中以 $A$ 为圆心的大圆比小圆半径大 $\va_1$,以 $B$
+为圆心的小圆比大圆半径小 $\va_2$.点 $C$ 运动到 $C'$.
+\begin{figure}[h]
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=0.5cm,yunit=0.5cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-11.58,-13.09)(28.2,4.64)
+\pscircle(2.44,-4.06){2.6}
+\pscircle(11.3,-4.2){4.35}
+\pscircle(2.44,-4.06){3.05}
+\pscircle(11.3,-4.2){4.03}
+\psline{->}(4.2,0.84)(5.38,1.29)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.44,-4.06)
+\rput[bl](1.56,-3.89){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](11.3,-4.2)
+\rput[bl](12.01,-4.33){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](4.2,0.84)
+\rput[bl](3.83,1.26){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=xdxdff](4.78,1.57)
+\rput[bl](4.5,1.93){\xdxdff{$D$}}
+\psdots[dotstyle=*,linecolor=xdxdff](5.38,1.29)
+\rput[bl](5.28,1.67){\xdxdff{$C'$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.8,0.58)
+\rput[bl](4.67,-0.02){\darkgray{$E$}}
+\end{scriptsize}
+\end{pspicture*}
+  \caption{}
+  \label{fig:2}
+\end{figure}
+
+仔细观察式 \eqref{eq:2},我们还能发现,如果将 $a$ 当作点 $C$ 的横坐标,$b$ 当
+作点 $C$ 的纵坐标,则我们有
+\begin{equation}
+  \label{eq:3}
+\lim_{\va_1\to 0}\frac{(b+\va_2)-b}{(a+\va_1)-a}=\frac{-b}{a}.
+\end{equation}
+也即,
+\begin{equation}
+  \label{eq:4}
+  \frac{d b}{d a}=\frac{-b}{a}.
+\end{equation}
+解这个微分方程,可得 $ab=k,k\in \mathbf{R}^{+}$.这与有两个焦点的卡西尼
+曲线定义相符.\\
+\end{document}
+
+
+
+
+
+
+
+

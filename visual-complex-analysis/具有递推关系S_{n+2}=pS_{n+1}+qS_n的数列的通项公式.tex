@@ -1,0 +1,311 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{remark}{注}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{具有递推关系 $S_{n+2}=pS_{n+1}+qS_n$的数列通项公式}}}
+\author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数
+      学与应用数学专业本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭
+      州师范大学理学院,数学112,学号:1002011005}}}
+\maketitle
+已知 $S_1,S_2$,让我们来求解具有递推关系 $S_{n+2}=pS_{n+1}+qS_n(n\geq
+1)$ 的数列的通项公式.其中 $S_1,S_2,p,q$ 都是复数.上述关系可以写成矩阵形
+式:
+\begin{equation}
+  \label{eq:1}
+  \begin{pmatrix}
+    S_{n+2}\\
+    S_{n+1}
+  \end{pmatrix}=\begin{pmatrix}
+    p&q\\
+    1&0
+  \end{pmatrix}\begin{pmatrix}
+    S_{n+1}\\
+    S_n
+  \end{pmatrix}.
+\end{equation}
+通过数学归纳法,可得
+\begin{equation}
+  \label{eq:2}
+  \begin{pmatrix}
+    S_{n+2}\\
+    S_{n+1}
+  \end{pmatrix}=\begin{pmatrix}
+    p&q\\
+    1&0
+  \end{pmatrix}^{n}\begin{pmatrix}
+    S_2\\
+    S_1
+  \end{pmatrix}.
+\end{equation}
+令
+\begin{equation}\label{eq:9.27}
+  \begin{pmatrix}
+    p&q\\
+    1&0
+  \end{pmatrix}\begin{pmatrix}
+    x\\
+    y\\
+  \end{pmatrix}=\lambda \begin{pmatrix}
+    x\\
+    y\\
+  \end{pmatrix},
+\end{equation}
+其中 $(x,y)$ 是非零向量.于是
+\begin{equation}
+  \label{eq:4}
+  \begin{pmatrix}
+    p-\lambda&q\\
+1&-\lambda
+  \end{pmatrix}\begin{pmatrix}
+    x\\
+y\\
+  \end{pmatrix}=0.
+\end{equation}
+因此
+\begin{equation}
+  \label{eq:5}
+  \begin{vmatrix}
+    p-\lambda&q\\
+1&-\lambda
+  \end{vmatrix}=0.
+\end{equation}
+因此
+\begin{equation}\label{eq:9.32}
+-\lambda(p-\lambda)-q=0 \iff \lambda^2-p\lambda -q=0.
+\end{equation}
+当上面的二次方程有两个不重合的复根时,解得
+$$
+\lambda_1=\frac{p+\sqrt{p^2+4q}}{2},\lambda_2=\frac{p-\sqrt{p^2+4q}}{2}.
+$$
+此时,根据方程 \eqref{eq:4},$x=\lambda_1y$ 或者 $x=\lambda_2y$.也即,矩
+阵 $\begin{pmatrix}
+  p&q\\
+1&0
+\end{pmatrix}$有(这里的有是存在的意思)两个特征向量 $(\lambda_1,1)$ 和 $(\lambda_2,1)$.这两
+个特征向量形成复数域上的二维线性空间 $\mathbf{C}^2$ 的一组基.因此存在
+唯一的 $k_1,k_2\in \mathbf{C}$,使得
+$$
+\begin{pmatrix}
+  S_2\\
+S_1
+\end{pmatrix}=k_1 \begin{pmatrix}
+  \lambda_1\\
+1
+\end{pmatrix}+k_2 \begin{pmatrix}
+  \lambda_2\\
+1
+\end{pmatrix}.
+$$
+于是,方程 \eqref{eq:2} 变为
+\begin{align*}
+  \begin{pmatrix}
+    S_{n+2}\\
+S_{n+1}
+  \end{pmatrix}&=\begin{pmatrix}
+    p&q\\
+1&0
+  \end{pmatrix}^{n}\left(k_1
+    \begin{pmatrix}
+      \lambda_1\\
+1
+    \end{pmatrix}+k_2
+    \begin{pmatrix}
+      \lambda_2\\
+1
+    \end{pmatrix}
+\right)\\&=k_1\lambda_1^n \begin{pmatrix}
+  \lambda_1\\
+1
+\end{pmatrix}+k_2\lambda_2^n \begin{pmatrix}
+  \lambda_2\\
+1
+\end{pmatrix}.
+\end{align*}
+这样我们就求得$\forall n\geq 0$, $S_{n+1}=k_1\lambda_1^n+k_2\lambda_2^n$.\\
+\newpage
+当二次方程 \eqref{eq:9.32} 有两个重根时,矩阵 $\begin{pmatrix}
+  p&q\\
+1&0
+\end{pmatrix}$ 只有一个特征值和特征向量,此时,该特征向量不足以展成(span)复数
+域上的线性空间 $\mathbf{C}^2$.此时,上面的方法很遗憾地行不通.
+\begin{thebibliography}{}
+\bibitem[1]{ben}假寐之海的博客大巴:\href{http://yjq24.blogbus.com/logs/114491860.html}{http://yjq24.blogbus.com/logs/114491860.html}
+\end{thebibliography}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+易得
+\begin{equation}
+  \label{eq:1.41}
+  \begin{pmatrix}
+    p&q\\
+1&0
+  \end{pmatrix}=\begin{pmatrix}
+    p\cos\theta-q\sin\theta&p\sin\theta+q\cos\theta\\
+\cos\theta&\sin\theta
+  \end{pmatrix}\begin{pmatrix}
+    \cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta
+  \end{pmatrix}.
+\end{equation}
+
+
+
+当矩阵
+\begin{equation}
+  \label{eq:3}
+  \begin{pmatrix}
+  p&q\\
+1&0
+\end{pmatrix}
+\end{equation}
+是不可逆矩阵时,易得 $q=0$,此时,原来的数列在不考虑第一项的情况下,就成为
+一个等比数列,此时易求其通项公式.当 $q\neq 0$ 时,此时矩阵 \eqref{eq:3}
+是可逆矩阵.点 $(x,y)$ 在矩阵 \eqref{eq:3} 的作用下变成点 $(px+qy,x)=(px,x)+(qy,x)$.
+
+
+
+
+
+
+
+
+
+
+在这之前,我们想先探索一下平面上的线性变换对平面的作用.设
+$$
+\begin{pmatrix}
+  a&b\\
+c&d\\
+\end{pmatrix}
+$$
+是 $\mathbf{R}^2$ 到 $\mathbf{R}^2$ 的线性变换所对应的矩阵,即对于平面
+上的任意一点 $(x,y)$,在这个矩阵的作用下变成点
+\begin{align*}
+\begin{pmatrix}
+  a&b\\
+c&d
+\end{pmatrix}\begin{pmatrix}
+  x\\
+y
+\end{pmatrix}&=\left(\begin{pmatrix}
+  a&b\\
+-b&a
+\end{pmatrix}+\begin{pmatrix}
+  0&0\\
+c+b&d-a
+\end{pmatrix}\right)\begin{pmatrix}
+x\\
+y\\
+\end{pmatrix}\\&=\begin{pmatrix}
+  a&b\\
+-b&a
+\end{pmatrix}\begin{pmatrix}
+  x\\
+y\\
+\end{pmatrix}+\begin{pmatrix}
+  0&0\\
+c+b&d-a
+\end{pmatrix}\begin{pmatrix}
+  x\\
+y\\
+\end{pmatrix}
+\end{align*}
+
+
+
+
+&=\left(\begin{pmatrix}
+  p&q\\
+-q&p
+\end{pmatrix}+\begin{pmatrix}
+  0&0\\
+1+q&-p
+\end{pmatrix}\right)^n\\&=\left(\sqrt{p^2+q^2}\begin{pmatrix}
+  \frac{p}{\sqrt{p^2+q^2}}&\frac{q}{\sqrt{p^2+q^2}}\\
+\frac{-q}{\sqrt{p^2+q^2}}&\frac{p}{\sqrt{p^2+q^2}}
+\end{pmatrix}+\begin{pmatrix}
+  0&0\\
+1+q&-p
+\end{pmatrix}\right)^n
+\end{align*}
+令
+$\frac{p}{\sqrt{p^2+q^2}}=\cos\theta$,$\frac{q}{\sqrt{p^2+q^2}}=\sin\theta$,$\sqrt{p^2+q^2}=r$,
+则上式化为
+
+
+
+
+
+
+
+
+
+
+我们决定采用极限的思
+想方法,对矩阵 $\begin{pmatrix}
+  p&q\\
+1&0
+\end{pmatrix}$ 构造一个微小的扰动,将其变为 $\begin{pmatrix}
+  p&q+\epsilon\\
+1&0
+\end{pmatrix}$,其中 $\epsilon$ 是一个模比较小的非零复数,此时,二次方程
+\eqref{eq:9.32} 会变为
+\begin{equation}
+  \label{eq:10.14}
+  \lambda^2-p\lambda-(q+\epsilon)=0,
+\end{equation}
+该方程会有两个不重合的复根(虽然这两个根的距离会比较近),此时会解得
+
+
+
+
+
+
+
+
+

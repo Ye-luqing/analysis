@@ -1,0 +1,206 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,color}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+
+\newcommand\pa{{\partial}}
+% \swapnumbers
+% \pagestyle{headings}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{foundations for a general theory of functions of a variable
+  complex magnitude}
+
+\author{Bernhard Riemann}
+%\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+%\email{yeluqingmathematics@gmail.com}
+ \thanks{This \LaTeX is typeset and commented in red by
+   Luqing Ye,whose email is yeluqingmathematics@gmail.com}
+
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+
+\section*{1}
+\label{sec:1}
+
+
+If we consider $z$ to be a variable magnitude which can gradually
+assume all possible real values,then we call $w$ a function of
+$z$,when each of its real values corresponds to a single value of
+undetermined magnitude such as $w_0$.If $w$ also constantly change
+while $z$ continuously goes through all the value lying between two
+fixed values,then we call this function within these intervals a
+constant or a continuous function.
+
+
+Obviously,this definition does not set up any absolute law between the
+individual values of the function,because when we assign a determinate
+value to this function,the way in which it continues outside of this
+interval remains totally arbitrary.
+
+We can express the slope function (dependence) of magnitude $w(z)$ by
+a mathematical law so that we can find the corresponding value of $w$
+for every value of $z$ through determinate numerical
+operations(Groessen operationen).{\color{blue}Previously,people have
+  only considered a certain kind of function (functiones continuae
+  according to Euler's usage) as having the ability of being able to
+  determine all the value of $z$ lying between a given interval by
+  using that same slope function law;}\footnote{{\color{red}
+    Sentences which I do not understand are typeset in
+    blue.}}however,in the meantime,new research has shown that there
+are analytic expressions that can represent each and every constant
+function for a given interval\footnote{{\color{red} Fourier
+    theorem.}}.This holds,regardless of whether the slope function of
+magnitude $w$ (magnitude $z$) is conditionally defined as an arbitrary
+given numerical operation,or as an determinate numerical operation.As
+a result of the theorems mentioned above,both concepts are congruent.
+
+But the situation is different when we do not limit the variability of
+magnitude $z$ to real values,but instead allow complex values of the
+form $x+yi$(where $i=\sqrt{-1}$).
+
+Assume that $x+yi$ and $x+yi+dx+dyi$ are two infinitesimally slightly
+different values for magnitude $z$,which correspond to the values
+$u+vi$ and $u+vi+du+dvi$ for magnitude {\color{green}$w$}.So then,if
+the slope function of magnitude $w(z)$ is an arbitrarily given
+one,then generally speaking,the ratio $\frac{du+dvi}{dx+dyi}$ changes
+for the values for $dx,dy$,because when we have $dx+dyi=\varepsilon
+e^{\varphi i}$,then
+\begin{eqnarray*}
+  \frac{du + dv \, i}{dx + dy \, i}
+  &=&   \frac{1}{2}
+  \left(
+    \frac{\partial u}{\partial x}
+    + \frac{\partial v}{\partial y}
+  \right)
+  + \frac{1}{2}
+  \left(
+    \frac{\partial v}{\partial x}
+    - \frac{\partial u}{\partial y}
+  \right) i \\
+  & & + \frac{1}{2}
+  \left[
+    \frac{\partial u}{\partial x}
+    - \frac{\partial v}{\partial y}
+    + \left(
+      \frac{\partial v}{\partial x}
+      + \frac{\partial u}{\partial y}
+    \right) i
+  \right]
+  \frac{dx - dy \, i}{dx + dy \, i} \\
+  &=&   \frac{1}{2}
+  \left(
+    \frac{\partial u}{\partial x}
+    + \frac{\partial v}{\partial y}
+  \right)
+  + \frac{1}{2}
+  \left(
+    \frac{\partial v}{\partial x}
+    - \frac{\partial u}{\partial y}
+  \right) i \\
+  & & + \frac{1}{2}
+  \left[
+    \frac{\partial u}{\partial x}
+    - \frac{\partial v}{\partial y}
+    + \left(
+      \frac{\partial v}{\partial x}
+      + \frac{\partial u}{\partial y}
+    \right) i
+  \right]
+  e^{-2 \varphi i}
+\end{eqnarray*}
+\footnote{{\color{red}
+Here we give a modern derivation of the Cauchy-Riemann equations.Let $f(x,y)=(u,v)$,where $f:\mathbf{R}^2\to \mathbf{R}^2$ is
+differentiable.So there is a linear map which maps $(dx,dy)$ to $(du,dv)$,i.e,
+$$
+\begin{pmatrix}
+  du\\
+dv
+\end{pmatrix}=\begin{pmatrix}
+  \frac{\partial u}{\partial x}&\frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x}&\frac{\partial v}{\partial y}
+\end{pmatrix}\begin{pmatrix}
+  dx\\
+dy
+\end{pmatrix}.
+$$
+We also want that 
+$$
+du+dv i=(c+di) (dx+dy i)+o(dx+dy i),
+$$
+where  $c+di$ is a complex number,and 
+$$
+\lim_{dx+dy i\to 0} \frac{o(dx+dy i)}{dx+dy i}=0.
+$$
+So
+$$
+\begin{pmatrix}
+  du\\
+dv
+\end{pmatrix}=\begin{pmatrix}
+  c&-d\\
+d&c\\
+\end{pmatrix}\begin{pmatrix}
+  dx\\
+dy
+\end{pmatrix}.
+$$
+So
+$$
+\frac{\pa u}{\pa x}=\frac{\pa v}{\pa y}=c,\frac{\pa v}{\pa x}=-\frac{\pa
+u}{\pa y}=d.
+$$
+
+Riemann's derivation gives us more information than the modern method
+we give above.If the Cauchy-Riemann
+equations are not satisfied by $\frac{\pa u}{\pa x},\frac{\pa u}{\pa
+  y},\frac{\pa v}{\pa x},\frac{\pa v}{\pa y}$,then the linear map from $\mathbf{R}^2$ to $\mathbf{R}^2$ maps a circle
+centering at the $(0,0)$ to an ellipse,Riemann's derivation provide us
+error term $\frac{1}{2}
+  \left[
+    \frac{\partial u}{\partial x}
+    - \frac{\partial v}{\partial y}
+    + \left(
+      \frac{\partial v}{\partial x}
+      + \frac{\partial u}{\partial y}
+    \right) i
+  \right]
+  e^{-2 \varphi i}$.
+  }}
+However,regardless of the manner in which we define $w$ as a function
+of $z$ through these simple numerical operation,the value of the
+differential quotient $\frac{dw}{dz}$ is always independent of the
+special values of differential $dz$.Obviously,not every arbitrary
+slope function of complex magnitude $w$ (complex magnitude $z$) can be
+expressed in this manner.
+\end{document}

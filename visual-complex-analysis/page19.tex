@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{求 $\frac{d^n}{dt^n}[e^{at}\sin bt]$}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+下面我们利用数学归纳法来求 $\frac{d^n}{dt^n}[e^{at}\sin bt]$.易得
+\begin{equation}
+  \label{eq:1}
+  \frac{d}{dt}[e^{at}\sin bt]=ae^{at}\sin bt+be^{at}\cos
+  bt=e^{at}(a\sin bt+b\cos bt)=e^{at}\sqrt{a^2+b^2}\sin(bt+\phi),
+\end{equation}
+其中 $\cos \phi=\frac{a}{\sqrt{a^2+b^2}}$,$\sin\phi=\frac{b}{\sqrt{a^2+b^2}}$.
+\begin{equation}
+  \label{eq:2}
+  \frac{d^2}{dt^2}[e^{at}\sin
+  bt]=\sqrt{a^2+b^2}(e^{at}b\cos(bt+\phi)+ae^{at}\sin
+  (bt+\phi))=(\sqrt{a^2+b^2})^2e^{at}\sin (bt+2\phi).
+\end{equation}
+类似地,可得
+$$
+\frac{d^n}{dt^n}[e^{at}\sin bt]=(\sqrt{a^2+b^2})^ne^{at}\sin (bt+n\phi).
+$$
+\end{document}
+
+
+
+
+
+
+
+

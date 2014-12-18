@@ -1,0 +1,96 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{problem}{Problem}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{generalization}{Generalization}[theorem]
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{A complex power series centered at the origin converges at
+$z=a$ will also converge everywhere inside the disc $|z|<|a|$ }
+
+\author{Luqing Ye}
+\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+% \thanks{}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+  A complex power series $P(z)$ centering at the origin is an
+  expression of the form 
+$$
+P(z)=c_0+c_1z+c_2z^2+c_3z^3+\cdots,
+$$
+where the $c_j$'s are complex constants,and $z$ is a complex
+variable.We have the following theorem,which can be
+found at \cite{visualcomplexanalysis}
+\begin{theorem}
+If $P(z)$ is a complex power series centering at the origin,and $P(z)$
+converges at $z=a$,then it will also converge everywhere inside the
+disc $|z|<|a|$.
+\end{theorem}
+\begin{proof}
+$P(z)$ converges at $z=a$,so for any given positive real $\varepsilon$,when $N$ is large enough,$\forall
+n>m>N$,$$|c_{m}a^{m}+\cdots+c_na^n|\leq \varepsilon.$$
+
+
+For any $z=b$ inside the disc $|z|<|a|$,we have $|b|<|a|$.So when $N$
+is large enough,$|c_{m}b^{m}+\cdots+c_nb^n|$ is far smaller than
+$|c_{m}a^{m}+\cdots+c_na^n|$,in the sense that
+$$
+\lim_{N\to\infty;c_{m}a^{m}+\cdots+c_{n}a^{n}\neq 0}\frac{c_{m}b^{m}+\cdots+c_nb^n}{c_{m}a^{m}+\cdots+c_na^n}=0.
+$$
+So for any given $\varepsilon>0$, when $N$ is large enough,
+$$
+|c_mb^m+\cdots+c_nb^n|\leq\varepsilon,
+$$
+which means that $P(z)$ converges at $z=b$.So $P(z)$ is convergent
+everywhere inside the disc $|z|<|a|$.
+\end{proof}
+
+This theorem can be generalized,as is stated by \cite{visualcomplexanalysis}.
+\begin{generalization}
+$P(z)$ is in fact absolutely convergent inside the disc $|z|<|a|$.  
+\end{generalization}
+\begin{proof}
+\begin{align*}
+\sum_{i=1}^{\infty}|c_nb^n|&=\sum_{i=1}^{\infty}|c_na^n||
+(\frac{b}{a})^n|\\&\leq \sum_{i=1}^{\infty}M|\frac{b}{a}|^n\\&=M \sum_{i=1}^{\infty}|\frac{b}{a}|^n\\&=const.
+\end{align*}
+
+\end{proof}
+
+\begin{thebibliography}{1}
+
+\bibitem{visualcomplexanalysis}Needham T. Visual Complex Analysis[M]. New York:Oxford University Press, 1997:67-68
+
+\end{thebibliography}
+\end{document} 
+
+

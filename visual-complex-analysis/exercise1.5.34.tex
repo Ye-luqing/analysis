@@ -1,0 +1,71 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.34}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+  若 $p$ 是素数,则
+$$
+(z-e^{\frac{2\pi i}{p}})(z-e^{\frac{4\pi i}{p}})\cdots
+(z-e^{\frac{2(p-1)\pi i}{p}})=1+z+z^2+\cdots+z^{p-1}.
+$$
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+ 易得
+$$
+(z-1)[(z-e^{\frac{2\pi i}{p}})(z-e^{\frac{4\pi i}{p}})\cdots
+(z-e^{\frac{2(p-1)\pi i}{p}})]=z^n-1,
+$$
+因此可得
+$$
+(z-e^{\frac{2\pi i}{p}})(z-e^{\frac{4\pi i}{p}})\cdots
+(z-e^{\frac{2(p-1)\pi i}{p}})=1+z+z^2+\cdots+z^{p-1}.
+$$
+注意在这里,$p$ 是素数这个条件的作用,请见\href{https://github.com/Ye-luqing/number-theory/blob/master/%E6%9C%BA%E6%A2%B0%E8%9B%99%E8%B7%B3%E6%A0%BC%E5%AD%90.tex}{这篇文档}.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+

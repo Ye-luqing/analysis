@@ -1,0 +1,317 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% \newcommand\eps{\varepsilon}
+% \newcommand\tr{\operatorname{tr}}
+\newcommand\diag{\operatorname{diag}}
+\newcommand\ad{\operatorname{ad}}
+% \newcommand\dist{\operatorname{dist}}
+% \renewcommand\span{\operatorname{span}}
+\newcommand\rank{\operatorname{rank}}
+% \renewcommand\Re{\operatorname{Re}}
+% \renewcommand\Im{\operatorname{Im}}
+\newcommand\g{{\mathbb{g}}}
+\newcommand\R{{\mathbb{R}}}
+\newcommand\C{{\mathbb{C}}}
+\newcommand\Z{{\mathbf{Z}}}
+\newcommand\D{{\mathbf{D}}}
+\newcommand\Q{{\mathbf{Q}}}
+\newcommand\G{{\mathbf{G}}}
+\newcommand\I{{\mathbf{I}}}
+\renewcommand\P{{\mathbf{P}}}
+\newcommand\E{{\mathbf{E}}}
+\newcommand\U{{\mathbf{U}}}
+\newcommand\A{{\mathbf{A}}}
+\newcommand\Var{\mathbf{Var}}
+\renewcommand\Im{{\operatorname{Im}}}
+\renewcommand\Re{{\operatorname{Re}}}
+\newcommand\eps{{\varepsilon}}
+\newcommand\trace{\operatorname{trace}}
+\newcommand\tr{\operatorname{trace}}
+\newcommand\dist{\operatorname{dist}}
+\newcommand\Span{\operatorname{Span}}
+\newcommand\sgn{\operatorname{sgn}}
+
+\renewcommand\a{x}
+\renewcommand\b{y}
+
+\newcommand\sign{{\operatorname{sign}}}
+\newcommand\Dyson{{\operatorname{Sine}}}
+\renewcommand\th{{\operatorname{th}}}
+
+
+
+\newcommand\condo{{{\bf C0}}}
+\newcommand\condone{{{\bf C1}}}
+
+% \newcommand\bm{{\mathbf{m}}}
+\newcommand\dd{\partial}
+\newcommand\smd{\hbox{smd}}
+\newcommand\Ba{{\mathbf a}}
+\newcommand\Bb{{\mathbf b}}
+\newcommand\Bc{{\mathbf c}}
+\newcommand\Bd{{\mathbf d}}
+\newcommand\Be{{\mathbf e}}
+\newcommand\Bf{{\mathbf f}}
+\newcommand\Bg{{\mathbf g}}
+\newcommand\Bh{{\mathbf h}}
+\newcommand\Bi{{\mathbf i}}
+\newcommand\Bj{{\mathbf j}}
+\newcommand\Bk{{\mathbf k}}
+\newcommand\Bl{{\mathbf l}}
+\newcommand\Bm{{\mathbf m}}
+\newcommand\Bn{{\mathbf n}}
+\newcommand\Bo{{\mathbf o}}
+\newcommand\Bp{{\mathbf p}}
+\newcommand\Bq{{\mathbf q}}
+\newcommand\Bs{{\mathbf s}}
+\newcommand\Bt{{\mathbf t}}
+\newcommand\Bu{{\mathbf u}}
+\newcommand\Bv{{\mathbf v}}
+\newcommand\Bw{{\mathbf w}}
+\newcommand\Bx{{\mathbf x}}
+\newcommand\By{{\mathbf y}}
+\newcommand\Bz{{\mathbf z}}
+\newcommand\p{{\mathbf p}}
+\newcommand\bi{{\mathbf i}}
+% 
+
+\newcommand\BA{{\mathbf A}}
+\newcommand\BB{{\mathbf B}}
+\newcommand\BC{{\mathbf C}}
+\newcommand\BD{{\mathbf D}}
+\newcommand\BE{{\mathbf E}}
+\newcommand\BF{{\mathbf F}}
+\newcommand\BG{{\mathbf G}}
+\newcommand\BH{{\mathbf H}}
+\newcommand\BI{{\mathbf I}}
+\newcommand\BJ{{\mathbf J}}
+\newcommand\BK{{\mathbf K}}
+\newcommand\BL{{\mathbf L}}
+\newcommand\BM{{\mathbf M}}
+\newcommand\BN{{\mathbf N}}
+\newcommand\BO{{\mathbf O}}
+\newcommand\BP{{\mathbf P}}
+\newcommand\BQ{{\mathbf Q}}
+\newcommand\BS{{\mathbf S}}
+\newcommand\BT{{\mathbf T}}
+\newcommand\BU{{\mathbf U}}
+\newcommand\BV{{\mathbf V}}
+\newcommand\BW{{\mathbf W}}
+\newcommand\BX{{\mathbf X}}
+\newcommand\BY{{\mathbf Y}}
+\newcommand\BZ{{\mathbf Z}}
+\renewcommand\Pr{{\mathbf P }}
+
+% cal letter
+
+\newcommand\CA{{\mathcal A}}
+\newcommand\CB{{\mathcal B}}
+\newcommand\CC{{\mathcal C}}
+\newcommand\CD{{\mathcal D}}
+\newcommand\CE{{\mathcal E}}
+\newcommand\CF{{\mathcal F}}
+\newcommand\CG{{\mathcal G}}
+\newcommand\CH{{\mathcal H}}
+\newcommand\CI{{\mathcal I}}
+\newcommand\CJ{{\mathcal J}}
+\newcommand\CK{{\mathcal K}}
+\newcommand\CL{{\mathcal L}}
+\newcommand\CM{{\mathcal M}}
+\newcommand\CN{{\mathcal N}}
+\newcommand\CO{{\mathcal O}}
+\newcommand\CP{{\mathcal P}}
+\newcommand\CQ{{\mathcal Q}}
+\newcommand\CS{{\mathcal S}}
+\newcommand\CT{{\mathcal T}}
+\newcommand\CU{{\mathcal U}}
+\newcommand\CV{{\mathcal V}}
+\newcommand\CW{{\mathcal W}}
+\newcommand\CX{{\mathcal X}}
+\newcommand\CY{{\mathcal Y}}
+\newcommand\CZ{{\mathcal Z}}
+
+% number theory
+
+\newcommand\BBN{{\mathbb N}}
+\newcommand\BBQ {{\mathbb Q}}
+\newcommand\BBI {{\mathbb I}}
+\newcommand\BBR {{\mathbb R}}
+\newcommand\BBZ {{\mathbb Z}}
+\newcommand\BBC{{\mathbb C}}
+% tilde
+
+\newcommand\ta{{\tilde a}}
+\newcommand\tb{{\tilde b}}
+\newcommand\tc{{\tilde c}}
+\newcommand\td{{\tilde d}}
+\newcommand\te{{\tilde e}}
+\newcommand\tf{{\tilde f}}
+\newcommand\tg{{\tilde g}}
+% \newcommand\th{{\tilde h}}
+\newcommand\ti{{\tilde i}}
+\newcommand\tj{{\tilde j}}
+\newcommand\tk{{\tilde k}}
+\newcommand\tl{{\tilde l}}
+\newcommand\tm{{\tilde m}}
+\newcommand\tn{{\tilde n}}
+% \newcommand\to{{\tilde o}}
+\newcommand\tp{{\tilde p}}
+\newcommand\tq{{\tilde q}}
+\newcommand\ts{{\tilde s}}
+% \newcommand\tt{{\tilde t}}
+\newcommand\tu{{\tilde u}}
+\newcommand\tv{{\tilde v}}
+\newcommand\tw{{\tilde w}}
+\newcommand\tx{{\tilde x}}
+\newcommand\ty{{\tilde y}}
+\newcommand\tz{{\tilde z}}
+\newcommand\ep{{\epsilon}}
+
+% \newcommand\sign{\hbox{sign}}
+
+%\subjclass{15A52}
+
+\def\x{{\bf X}}
+\def\y{{\bf Y}}
+% \def\I#1{{\bf 1}_{#1}}
+\def\mb{\mbox}
+\newcommand\cl{{\operatorname{cl}}}
+\renewcommand\sc{{\operatorname{sc}}}
+\newcommand\Ai{{\operatorname{Ai}}}
+\newcommand\Sine{{\operatorname{Sine}}}
+
+% \swapnumbers
+% \pagestyle{headings}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{Properties of complex differentiation}
+
+\author{Luqing Ye}
+\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+\begin{itemize}
+\item The uniqueness of derivative:If $f$ is differentiable at
+  $z_0$,then $f'(z_0)$ is well defined,i.e,$f'(z_0)$ is a unique
+  complex number.
+  \begin{proof}
+Suppose
+$$
+f(x)=f(z_0)+c_1(x-z_0)+o_1(x-z_0),
+$$
+$$
+f(x)=f(z_0)+c_2(x-z_0)+o_2(x-z_0),
+$$
+where $c_1\neq c_2$,and $\lim_{x\to z_0;x\neq
+  z_0}\frac{o(x-z_0)}{x-z_0}=0$,then 
+$$
+0=(c_1-c_2)(x-z_0)+o_3(x-z_0) \iff c_1-c_2=0.
+$$
+So $f'(z_0)$ is unique.
+  \end{proof}
+\item If $f$ is differentiable at $z_0$ then $f$ is continuous at
+  $z_0$.
+  \begin{proof}
+    $f$ is differentiable at $z_0$ means that there exists a complex
+    number $f'(z_0)$ such that
+$$
+f(x)=f(z_0)+f'(z_0) (x-z_0)+o(x-z_0),
+$$
+so
+$\lim_{x\to z_0}f(x)=f(z_0)$.
+  \end{proof}
+\item If $f$ and $g$ are differentiable at $z_0$,then $f+g$ and $fg$
+  also are,and 
+$$
+(f+g)'(z_0)=f'(z_0)+g'(z_0).
+$$
+\begin{proof}
+  $f$ is differentiable at $z_0$,this means that
+$$
+f(x)=f(z_0)+f'(z_0)(x-z_0)+o_{1}(x-z_0),
+$$
+$$
+g(x)=g(z_0)+g'(z_0)(x-z_0)+o_{2}(x-z_0).
+$$
+So
+$$
+f(x)+g(x)=[f(z_0)+g(z_0)]+[f'(z_0)+g'(z_0)](x-z_0)+o_3(x-z_0).
+$$
+$$
+f(x)g(x)=f(z_0)g(z_0)+[f(z_0)g'(z_0)+g(z_0)f'(z_0)](x-z_0)+o_4(x-z_0).
+$$
+\end{proof}
+\item If $g(z_0)\neq 0$,and $g$ is differentiable at $z_0$,then
+  $1/g$ is differentiable at $z_0$,and 
+$$
+\left (\frac{1}{g}\right)'(z_0)=\frac{-g'(z_0)}{g(z_0)^2}.
+$$
+\begin{proof}
+\begin{align*}
+\frac{1}{g(x)}-\frac{1}{g(z_0)}&=\frac{g(z_0)-g(x)}{g(x)g(z_0)}\\&=\frac{-g'(z_0)(x-z_0)-o(x-z_0)}{g(x)g(z_0)}.
+\end{align*}
+Done.
+\end{proof}
+\item If $f$ is differentiable at $z_0$ and $g$ is differentiable at
+  $f(z_0)$,then the composite function $g\circ f$ is differentiable at
+  $z_0$ and 
+$$
+(g\circ f)'(z_0)=g'(f(z_0))f'(z_0).
+$$
+\begin{proof}
+$g$ is differentiable at $f(z_0)$,this means that
+$$
+g(f(x))=g(f(z_0))+g'(f(z_0))(f(x)-f(z_0))+o(f(x)-f(z_0)).
+$$
+$f$ is differentiable at $z_0$,so
+$$
+f(x)-f(z_0)=f'(z_0)(x-z_0)+o(x-z_0),
+$$
+So
+\begin{align*}
+g(f(x))&=g(f(z_0))+g'(f(z_0))(f'(z_0)(x-z_0)+o(x-z_0))+o(f(x)-f(z_0))\\&=g(f(z_0))+g'(f(z_0))f'(z_0)(x-z_0)+o(x-z_0)g'(f(z_0))+o(f(x)-f(z_0)).
+\end{align*}
+Done.
+\end{proof}
+\end{itemize}
+
+
+
+
+
+
+\end{document} 
+
+

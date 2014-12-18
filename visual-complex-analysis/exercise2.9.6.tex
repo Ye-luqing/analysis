@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\newtheorem*{remark}{注}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题2.9.6}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}[2.9.6.4]
+若两曲线在 $p\neq 0$ 处相交成角 $\phi$,则它们在映射 $z\to \omega=z^2$
+下的象也在 $\omega=p^2$ 处以同样的角 $\phi$ 相交.  
+\end{exercise}
+\begin{proof}[\bf{证明}]
+我们来看映射 $z\to z^2$ 意味着什么.它把点$z=(z_1,z_2)$
+变为点$z'=(z_1^2-z_2^2,2z_1z_2).$
+易得
+$$
+\frac{\pa z}{\pa z_1}=(1,0),\frac{\pa z}{\pa z_2}=(0,1),
+$$
+$$
+\frac{\pa z'}{\pa z_1}=(2z_1,2z_2),\frac{\pa z'}{\pa z_2}=(-2z_2,2z_1).
+$$
+由于
+$$
+\begin{pmatrix}
+  2z_1\\
+2z_2
+\end{pmatrix}\begin{pmatrix}
+  -2z_2&2z_1
+\end{pmatrix}=0=\begin{pmatrix}
+  1\\
+0\\
+\end{pmatrix}\begin{pmatrix}
+  0&1
+\end{pmatrix},
+$$
+且
+$$
+\left |\frac{\pa z'}{\pa z_1}\right|=\left|\frac{\pa z'}{\pa
+    z_2}\right|\neq 0,
+$$
+因此命题得证.
+\end{proof}
+\begin{remark}
+  我们探究一下 $z\to z^3$ 是不是有这样的性质.$z\to z^3$ 把点
+  $(z_1,z_2)$ 变为 $(z_1^3-3z_2^2z_{1},3z_1^2z_{2}-z_2^3)$.易得 $z\to
+  z^3$ 也是具有这样的性质的.
+\end{remark}
+\end{document}
+
+
+
+
+
+
+
+

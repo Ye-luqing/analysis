@@ -1,0 +1,120 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{利用几何变换来证明拿破仑三角形}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{theorem}[拿破仑三角形]
+如图,$ABC$ 是任意三角形.在三条边上分别向外作三个正三角形.三个正三角形
+的中心分别为 $L,I,O$.则 $LIO$ 是个正三角形.\\
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\newrgbcolor{ttzzqq}{0.2 0.6 0}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(0,-7.51)(25.09,5.72)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](6.34,1.74)(11.9,-0.72)(4.42,-0.5)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](6.34,1.74)(11.9,-0.72)(11.25,5.33)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](11.9,-0.72)(4.42,-0.5)(7.97,-7.09)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](4.42,-0.5)(6.34,1.74)(3.44,2.28)
+\pspolygon[linecolor=ttzzqq,fillcolor=ttzzqq,fillstyle=solid,opacity=0.1](9.83,2.12)(8.1,-2.77)(13.2,-1.83)
+\psline[linecolor=zzttqq](6.34,1.74)(11.9,-0.72)
+\psline[linecolor=zzttqq](11.9,-0.72)(4.42,-0.5)
+\psline[linecolor=zzttqq](4.42,-0.5)(6.34,1.74)
+\psline[linecolor=zzttqq](6.34,1.74)(11.9,-0.72)
+\psline[linecolor=zzttqq](11.9,-0.72)(11.25,5.33)
+\psline[linecolor=zzttqq](11.25,5.33)(6.34,1.74)
+\psline[linecolor=zzttqq](11.9,-0.72)(4.42,-0.5)
+\psline[linecolor=zzttqq](4.42,-0.5)(7.97,-7.09)
+\psline[linecolor=zzttqq](7.97,-7.09)(11.9,-0.72)
+\psline[linecolor=zzttqq](4.42,-0.5)(6.34,1.74)
+\psline[linecolor=zzttqq](6.34,1.74)(3.44,2.28)
+\psline[linecolor=zzttqq](3.44,2.28)(4.42,-0.5)
+\psline(4.73,1.17)(9.83,2.12)
+\psline(9.83,2.12)(8.1,-2.77)
+\psline(4.73,1.17)(8.1,-2.77)
+\psline[linecolor=ttzzqq](9.83,2.12)(8.1,-2.77)
+\psline[linecolor=ttzzqq](8.1,-2.77)(13.2,-1.83)
+\psline[linecolor=ttzzqq](13.2,-1.83)(9.83,2.12)
+\psline(4.73,1.17)(13.2,-1.83)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](6.34,1.74)
+\rput[bl](6.43,1.87){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](11.9,-0.72)
+\rput[bl](11.99,-0.58){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](4.42,-0.5)
+\rput[bl](4.51,-0.37){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](11.25,5.33)
+\rput[bl](11.34,5.46){\darkgray{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.97,-7.09)
+\rput[bl](8.06,-6.95){\darkgray{$E$}}
+\psdots[dotstyle=*,linecolor=darkgray](3.44,2.28)
+\rput[bl](3.54,2.41){\darkgray{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](9.83,2.12)
+\rput[bl](9.92,2.24){\darkgray{$I$}}
+\psdots[dotstyle=*,linecolor=darkgray](4.73,1.17)
+\rput[bl](4.82,1.31){\darkgray{$L$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.1,-2.77)
+\rput[bl](8.19,-2.65){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=darkgray](13.2,-1.83)
+\rput[bl](13.29,-1.69){\darkgray{$P$}}
+\psdots[dotstyle=*,linecolor=xdxdff](8.96,-0.34)
+\rput[bl](9.06,-0.21){\xdxdff{$Q$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{theorem}
+\begin{proof}[\textbf{证明}]
+由于将 $C$ 绕着 $L$ 逆时针旋转 $\frac{2\pi}{3}$ 后会得到 $A$,$A$ 绕着
+$I$ 逆时针旋转 $\frac{2\pi}{3}$ 后会得到 $B$,$B$ 绕着 $O$ 逆时针旋转
+$\frac{2\pi}{3}$ 后会重新得到 $C$.因此将 $L$ 绕着 $L$ 逆时针旋转
+$\frac{2\pi}{3}$ 得到 $L$,$L$ 绕着 $I$ 逆时针旋转 $\frac{2\pi}{3}$ 得
+到 $P$,$P$ 绕着 $O$ 逆时针旋转 $\frac{2\pi}{3}$ 会重新得到 $L$.因此可
+得 $IL=IP$,$OL=OP$,且 $\angle LIP=\angle LOP=\frac{2\pi}{3}$.现在选取
+$LP$ 的中点 $Q$,易得 $IQ$ 垂直于 $LP$,$OQ$ 垂直于 $LP$,因此 $IQP$ 共线.因
+此易得 $\angle LIQ=\angle LOQ=\frac{\pi}{3}$,于是 $LIO$ 是正三角形.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+

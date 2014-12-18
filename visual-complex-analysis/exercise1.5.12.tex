@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.12}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+  用图形求出以下两个方程
+$$
+\hbox{Re}\left(\frac{z-1-i}{z+1+i}\right)=0
+$$
+与
+$$
+\hbox{Im}\left(\frac{z-1-i}{z+1+i}\right)=0
+$$
+的轨迹.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+第一个方程对应于下图.\\
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture*}(-10.61,-5.12)(12.63,5.24)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-10.61,-5.12)(12.63,5.24)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=0.5,Dy=0.5,ticksize=-2pt 0,subticks=2]{->}(0,0)(-5.31,-2.56)(6.32,2.62)
+\pscircle(0,0){1.41}
+\parametricplot[linewidth=5.2pt]{0.7853981633974483}{3.9269908169872414}{1*1.41*cos(t)+0*1.41*sin(t)+0|0*1.41*cos(t)+1*1.41*sin(t)+0}
+\parametricplot[linewidth=5.2pt]{-2.356194490192345}{0.7853981633974483}{1*1.41*cos(t)+0*1.41*sin(t)+0|0*1.41*cos(t)+1*1.41*sin(t)+0}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.03,1.05){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](-1,-1)
+\rput[bl](-0.97,-0.95){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.04,0.05){\darkgray{$C$}}
+\end{scriptsize}
+\end{pspicture*}
+
+第二个方程对应于\\
+\psset{xunit=0.5cm,yunit=0.5cm}
+\begin{pspicture*}(-10.61,-5.12)(12.63,5.24)
+\psgrid[subgriddiv=0,gridlabels=0,gridcolor=lightgray](0,0)(-10.61,-5.12)(12.63,5.24)
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=0.5,Dy=0.5,ticksize=-2pt 0,subticks=2]{->}(0,0)(-5.31,-2.56)(6.32,2.62)
+\psline(-1,-1)(1,1)
+\psplot{-5.31}{6.32}{(-0-2*x)/-2}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](1,1)
+\rput[bl](1.03,1.05){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](-1,-1)
+\rput[bl](-0.97,-0.95){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.04,0.05){\darkgray{$C$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+

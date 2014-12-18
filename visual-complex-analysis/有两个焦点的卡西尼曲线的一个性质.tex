@@ -1,0 +1,183 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=STXihei]{FZFangSong-Z02S}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{有两个焦点的卡西尼曲线的一个性质}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院}}}
+\maketitle
+我们把平面上满足到两个不同定点的距离乘积为定值这个条件的所有点形成的集
+合叫做有两个焦点的卡西尼曲线.两个定点叫做卡西尼曲线的焦点.下面我
+们来证明,有两个焦点的卡西尼曲线具有如下性质:
+
+\begin{theorem}
+\textbf{对于有两个焦点的卡西尼曲线,当确定卡西尼曲线上的任意一点后,
+该点的任意小去心邻域都含有该卡西尼曲线上的点.}
+\end{theorem}
+当 $n=2$ 时,有三种情况.令 $A,B$
+为平面上的两个定点,$C$ 到 $A,B$ 的距离乘积为 $|AC||BC|$.分别体现
+在图\eqref{fig:1} ,图 \eqref{fig:2} 和 图 \eqref{fig:3} 中.\\
+
+在图 \eqref{fig:1} 中,以 $C$ 为圆心做一个任意的半径比较小的圆
+(圆的半径比 $C$ 到直线 $AB$ 的距离小),且经过 $C$ 作 $AB$ 的垂线,垂线与
+圆交于 $G,F$.则易得
+\begin{equation}
+  \label{eq:1}
+ |GA||GB|> |CA||CB|>|FA||FB|.
+\end{equation}
+对于圆周上的任意一点 $K$,当 $K$ 变动时,易得 $|KA||KB|$ 是连续变动的,也
+即,$|KA||KB|$ 是关于 $K$ 的位置连续的.因此根据介值原理,必定在圆弧
+$\wideparen{GF}$(在左边)或者圆弧 $\wideparen{FG}$(在右边) 上分别存在点
+$K'$ ,$K''$,使得 $|K'A||K'B|=|CA||CB|$,$|K''A||K''B|=|CA||CB|$.\\
+
+
+\begin{figure}[h]
+  \newrgbcolor{qqwuqq}{0 0.39 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.78,-5.44)(20.54,6.74)
+\pspolygon[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1](4.31,-1.52)(3.89,-1.54)(3.91,-1.97)(4.33,-1.95)
+\psline(4.12,2.6)(2.42,-2.02)
+\psline(4.12,2.6)(10.64,-1.7)
+\pscircle(4.12,2.6){1.21}
+\psline(2.42,-2.02)(10.64,-1.7)
+\psline(4.12,2.6)(4.33,-1.95)
+\psline(4.18,1.39)(2.42,-2.02)
+\psline(4.18,1.39)(10.64,-1.7)
+\psline(4.06,3.81)(2.42,-2.02)
+\psline(4.06,3.81)(10.64,-1.7)
+\psline(4.12,2.6)(4.06,3.81)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.42,-2.02)
+\rput[bl](1.96,-1.94){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](10.64,-1.7)
+\rput[bl](10.72,-1.58){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](4.12,2.6)
+\rput[bl](4.2,2.72){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](4.18,1.39)
+\rput[bl](4.26,1.5){\blue{$F$}}
+\psdots[dotstyle=*,linecolor=blue](4.06,3.81)
+\rput[bl](4.14,3.94){\blue{$G$}}
+\end{scriptsize}
+\end{pspicture*}
+  \caption{}
+  \label{fig:1}
+\end{figure}
+
+在图 \eqref{fig:2} 中,点 $C$ 位于 直线 $AB$ 上且位于线段 $AB$ 之外时,
+易得
+\begin{equation}
+  \label{eq:2}
+  |AE||BE|<|AC||BC|<|AF||BF|.
+\end{equation}
+因此在圆弧 $\wideparen{EF}$ 和 $\wideparen{FE}$ 上分别存在 $K',K''$,使
+得 $|AK'||BK'|=|AC||BC|=|AK''||BK''|$.\\
+
+\begin{figure}[h]
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.01,-6.92)(17.65,1.4)
+\pscircle(11.27,-2.73){0.59}
+\psline(3.3,-2.76)(11.86,-2.73)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.3,-2.76)
+\rput[bl](3.35,-2.68){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](9.07,-2.74)
+\rput[bl](9.13,-2.66){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=xdxdff](11.27,-2.73)
+\rput[bl](11.33,-2.64){\xdxdff{$C$}}
+\psdots[dotstyle=*,linecolor=darkgray](10.68,-2.73)
+\rput[bl](10.74,-2.66){\darkgray{$E$}}
+\psdots[dotstyle=*,linecolor=darkgray](11.86,-2.73)
+\rput[bl](11.91,-2.64){\darkgray{$F$}}
+\end{scriptsize}
+\end{pspicture*}
+  \caption{}\label{fig:2}
+\end{figure}
+
+当点 $C$ 位于直线 $AB$ 上且位于线段 $AB$ 之间时,如图 \eqref{fig:3},则
+可得
+$$
+|AD||BD|=(|AC|-|DC|)(|BC|+|DC|)=|AC||BC|+|DC|(|AC|-|BC|)-|DC|^2.
+$$
+令 $|DC|$ 足够小,则当 $|AC|\geq |BC|$ 时可得 $|AD||BD|<|AC||BC|$.当
+$|AC|< |BC|$ 时可得 $|AD||BD|>|AC||BC|$,根据对称性,此时必有
+$|AE||BE|<|AC||BC|$.而且我们必有  $|AI||BI|>|AC||BC|$.可见,在弧
+$\wideparen{DI}$ 或者 $\wideparen{IE}$ 上必定存在 $K$,使得
+$|AK||BK|=|AC||BC|$.\\
+
+这样我们就分别分析了三种仅有的情况.由于以 $C$ 为圆心所做的圆的半径是任
+意小的,因此我们就证明了定理.
+\begin{figure}[h]
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\newrgbcolor{qqwuqq}{0 0.39 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.61,-5.53)(17.13,2.38)
+\pspolygon[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1](8.18,-0.47)(7.9,-0.48)(7.9,-0.75)(8.18,-0.75)
+\psline(2.32,-0.84)(11.1,-0.7)
+\pscircle(8.18,-0.75){1.02}
+\psline(8.16,0.27)(8.2,-1.77)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.32,-0.84)
+\rput[bl](2.38,-0.76){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](11.1,-0.7)
+\rput[bl](11.16,-0.62){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=xdxdff](8.18,-0.75)
+\rput[bl](8.18,-0.65){\xdxdff{$C$}}
+\psdots[dotstyle=*,linecolor=xdxdff](9.2,-0.73)
+\rput[bl](9.25,-0.65){\xdxdff{$E$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.16,-0.76)
+\rput[bl](6.87,-0.67){\darkgray{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.16,0.27)
+\rput[bl](8.22,0.35){\darkgray{$H$}}
+\psdots[dotstyle=*,linecolor=darkgray](8.2,-1.77)
+\rput[bl](8.25,-1.69){\darkgray{$I$}}
+\end{scriptsize}
+\end{pspicture*}
+  \caption{}
+  \label{fig:3}
+\end{figure}
+\end{document}
+
+
+
+
+
+
+
+

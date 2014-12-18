@@ -1,0 +1,350 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem{theo}{定理}
+\newtheorem*{hypo}{猜想}
+\newmdtheoremenv{lemma}{引理}
+\newmdtheoremenv{corollary}{推论}
+\newmdtheoremenv{exercise}{习题}
+\newmdtheoremenv{example}{例}
+\newenvironment{theorem}
+  {\bigskip\begin{mdframed}\begin{theo}}
+  {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{hypothethis}
+  {\bigskip\begin{mdframed}\begin{hypo}}
+  {\end{hypo}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=FZHei-B01S]{FZFangSong-Z02S}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\begin{document}
+\title{\huge{\bf{从一个错误的猜想到Fermat点}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,Email:yeluqingmathematics@gmail.com}}\\{\small{杭州师范
+      大学理学院,杭州,浙江}}}
+\maketitle
+我们探讨如下猜想:
+\begin{hypothethis}
+  设 $O$ 是一个圆,圆心
+  为 $P$.圆 $O$ 外有 $n$ 个点$P_1,P_2,\cdots,P_n$.则圆 $O$ 上存在
+  点 $P'$,使得
+$$
+|PP_1|+|PP_2|+\cdots+|PP_n|=|P'P_1|+|P'P_2|+\cdots+|P'P_n|.
+$$
+\end{hypothethis}
+\begin{proof}[\textbf{探索}]
+  当 $n=1$ 时,如图 \eqref{fig:1},以 $P_{1}$ 为圆心,$|P_1P|$ 为半径作出
+  另外一个圆.两个圆的交点即为满足条件的 $P'$.当然,也可以这么看:作出直
+  线$P_1P$,与圆 $O$ 分别交于 $Q,Q'$.由于 $|P_1Q'|<|P_1P|<|P_1Q|$,且由于
+  圆$O$上的点$K$与 $P_1$的距离是关于点 $K$ 的位置的连续函数,因此根据连
+  续函数的介值定理,必定在圆弧 $\wideparen{QQ'}$ 和圆
+  弧 $\wideparen{Q'Q}$ 上存在
+  点 $P'$ 以及 $P''$,使得 $|P'P_1|=|PP_1|=|P''P_1|$.(圆弧
+  $\wideparen{QQ'}$ 位于$\wideparen{Q'Q}$ 的上面.)
+  \begin{figure}[h]
+    \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt
+      0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+    \begin{pspicture*}(2,-5.3)(25,6.88) \pscircle(7.34,1){3.18}
+      \pscircle(12.38,0.86){5.04} \psline(4.17,1.09)(12.38,0.86)
+      \begin{scriptsize}
+        \psdots[dotstyle=*](7.34,1) \rput[bl](7.42,1.12){$P$}
+        \psdots[dotstyle=*](12.38,0.86) \rput[bl](12.46,0.98){$P_1$}
+        \psdots[dotstyle=*](8.42,3.99) \rput[bl](8.24,4.24){$P'$}
+        \psdots[dotstyle=*](8.26,-2.04) \psdots[dotstyle=*](4.17,1.09)
+        \rput[bl](4.24,1.2){$Q$} \psdots[dotstyle=*](10.51,0.91)
+        \rput[bl](10.6,1.04){$Q'$}
+      \end{scriptsize}
+    \end{pspicture*}
+    \caption{}
+    \label{fig:1}
+  \end{figure}
+
+  当 $n=2$ 时,如图 \eqref{fig:2}.易得
+$$
+|P_1Q'|+|P_2Q'|\leq |P_1P|+|P_2P|\leq |P_1Q|+|P_2Q|,
+$$
+且两个等号成立当且仅当线段 $P_1P_2$ 经过圆心.由于 $|P_1K|+|P_2K|$ 是关
+于点 $K$ 的位置而连续变化的,因此根据连续函数的介值原理,可得在
+弧$\wideparen{QQ'}$ 和 $\wideparen{Q'Q}$ 上分别存在 $P',P''$,使得
+$$
+|P_1P'|+|P_2P'|=|P_1P|+|P_2P|=|P_1P''|+|P_2P''|.
+$$
+\begin{figure}[h]
+  \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt
+    0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+  \begin{pspicture*}(-3.44,-5.18)(19.88,7) \pscircle(5.64,0.76){3.03}
+    \psline(5.64,0.76)(11.3,1.34) \psline(5.64,0.76)(1.06,4.36)
+    \psline(1.06,4.36)(8.02,-1.11) \psline(3.26,2.63)(11.3,1.34)
+    \psline(8.02,-1.11)(11.3,1.34)
+    \begin{scriptsize}
+      \psdots[dotstyle=*](5.64,0.76) \rput[bl](5.46,1.04){$P$}
+      \psdots[dotstyle=*](11.3,1.34) \rput[bl](11.38,1.46){$P_2$}
+      \psdots[dotstyle=*](1.06,4.36) \rput[bl](1.14,4.48){$P_1$}
+      \psdots[dotstyle=*](8.02,-1.11) \rput[bl](7.96,-0.76){$Q$}
+      \psdots[dotstyle=*](3.26,2.63) \rput[bl](3.14,2.88){$Q'$}
+    \end{scriptsize}
+  \end{pspicture*}
+  \caption{}
+  \label{fig:2}
+\end{figure}
+
+在论证 $n=3$ 的情形时,我们遇到了困难.为此,我们决定从代数的角度来考
+察$n=3$ 的情形.我们在平面直角坐标系中看函数 $f(x,y)$,其中
+$$
+f(x,y)=\sqrt{(x-a_1)^2+(y-b_1)^2}+\sqrt{(x-a_2)^2+(y-b_2)^2}+\sqrt{(x-a_3)^2+(y-b_3)^2},
+$$
+$P_1=(a_1,b_1),P_2=(a_2,b_2),P_3=(a_3,b_3)$.我们来求 $f(x,y)$ 的最小值
+(如果存在的话).如果我们求出了 $f(x,y)$ 的最小值,且使得 $f(x,y)$ 为最小
+值的点唯一,且使得 $f(x,y)$ 为最小值的点不与 $P_1,P_2,P_3$ 重合,则可得猜想对于 $n=3$ 的情形不再成
+立.这样的点是有可能存在的,和 Fermat 点有关.下面笔者用分析的方法证明,当
+非退化三角形 $P_1P_2P_3$ 的内角都不大于 $\frac{2\pi}{3}$ 时,平面上存在
+一个点,该点到 $P_1,P_2,P_3$ 的距离和最小,且该点在三角形 $P_1P_{2}P_3$
+的内部.这个点叫三角形 $P_{1}P_{2}P_3$ 的Fermat点.\\
+
+当 $(x,y)$ 与 $P_1,P_2,P_3$ 不重合时,易得
+$$
+\frac{\pa f}{\pa
+  x}=\frac{x-a_1}{\sqrt{(x-a_1)^2+(y-b_1)^2}}+\frac{x-a_2}{\sqrt{(x-a_2)^2+(y-b_2)^2}}+\frac{x-a_3}{\sqrt{(x-a_3)^2+(y-b_3)^2}},
+$$
+$$
+\frac{\pa f}{\pa
+  y}=\frac{y-b_1}{\sqrt{(y-a_1)^2+(y-b_1)^2}}+\frac{y-b_2}{\sqrt{(y-a_2)^2+(y-b_2)^2}}+\frac{y-b_3}{\sqrt{(y-a_3)^2+(y-b_3)^2}}.
+$$
+令向量
+$$
+\overrightarrow{M_{1}}(x,y)=\begin{pmatrix}
+  x-a_1\\
+  y-b_1
+\end{pmatrix},\overrightarrow{M_{2}}(x,y)=\begin{pmatrix}
+  x-a_2\\
+  y-b_2\\
+\end{pmatrix},\overrightarrow{M_3}(x,y)=\begin{pmatrix}
+  x-a_3\\
+  y-b_3
+\end{pmatrix}.
+$$
+在极值点 $(x_0,y_0)$,必有
+\begin{equation}
+  \label{eq:1111}
+  \frac{\pa f}{\pa x}(x_0,y_0)=0,\frac{\pa f}{\pa y}(x_0,y_0)=0.
+\end{equation}
+方程组 \eqref{eq:1111}等价于
+\begin{equation}\label{eq:1}
+  \frac{\overrightarrow{M_1}(x_0,y_0)}{|\overrightarrow{M_1}(x_0,y_0)|}+\frac{\overrightarrow{M_2}(x_0,y_0)}{|\overrightarrow{M_2}(x_0,y_0)|}+\frac{\overrightarrow{M_3}(x_0,y_0)}{|\overrightarrow{M_3}(x_0,y_0)|}=0.
+\end{equation}
+易得 \eqref{eq:1} 式有解当且仅当单位向
+量
+$\frac{\overrightarrow{M_1}(x_0,y_0)}{|\overrightarrow{M_1}(x_0,y_0)|},\frac{\overrightarrow{M_{2}(x_0,y_0)}}{|\overrightarrow{M_2}(x_0,y_0)|},\frac{\overrightarrow{M_{3}}(x_0,y_0)}{|\overrightarrow{M_3}(x_0,y_0)|}$
+两两之间的夹角都为 $\frac{2\pi}{3}$.因此 \eqref{eq:1} 式若有解,必有
+点$P_1,P_2,P_3$ 不共线,能形成一个非退化
+的三角形的顶点.\\
+
+当 $P_1,P_2,P_3$ 不共线,且形成的三角形的内角都小
+于 $\frac{2\pi}{3}$时,形成三角形如图 \eqref{fig:3}.在图 \eqref{fig:3}
+中,点$P$ 在三角形$P_{1}P_{2}P_{3}$ 的内部或边界.对于
+角$\alpha,\beta,\gamma$ 来说,易得满足
+$$
+\begin{cases}
+  \alpha+\beta+\gamma=2\pi,\\
+  \angle P_1P_{2}P_{3}< \alpha\leq \pi,\\
+  \angle P_2P_{3}P_{1}< \beta\leq \pi,\\
+  \angle P_3P_{1}P_{2}< \gamma\leq \pi.\\
+\end{cases}
+$$
+且易得角 $\alpha,\beta,\gamma$ 的弧度会随着点 $P$ 位置的连续变动而连续
+变化,因此根据连续函数的介值定理,必定存在三角形 $P_{1}P_{2}P_{3}$ 内部或
+边界上的一点,使得当 $P$ 运动到该点
+时,会有$\alpha=\beta=\gamma=\frac{2\pi}{3}$.而且,使得
+$\alpha,\beta,\gamma$都为 $\frac{2\pi}{3}$ 的点 $P$ 是唯一的,这是因
+为,假如还有另外一个点$P'$ 使得 $\alpha=\beta=\beta=\frac{2\pi}{3}$,且$P'$ 与 $P$ 不重合,若 $P'$ 位于三角
+形 $P_{1}P_{2}P_3$ 之内或边界上,根据对称性不妨设 $P'$ 位于三角
+形 $P_{1}PP_2$ 之内或边界上,那么根据三角形的外角与内角的关
+系,可得 $\angle P_1P'P_{2}>\angle P_{1}PP_{2}=\frac{2\pi}{3}$,矛盾.因此
+可得 $P'$ 不可能在三角形$P_{1}P_{2}P_3$ 的内部或边界.类似的论证可以证
+明 $P'$ 也不可能在三角形的外面.因此可得 $P'$ 不存在.于是此时,使
+得$\alpha=\beta=\gamma=\frac{2\pi}{3}$ 的点 $P$ 是唯一的.\\
+
+下面我们来证明满足 $\alpha=\beta=\gamma=\frac{2\pi}{3}$ 的点 $P$ 使
+得 $f(x,y)$ 达到了最小值.首先由上面的分析可得 $f$ 的驻点是至多只有一个的.假
+如驻点$P$ 不是 $f$ 的极小值点,而是鞍点或者极大值点,则在 $P$ 的任意给定小的
+邻域 $U$内肯定存
+在另外的点 $P''$ 使得 $f(x,y)$ 在$P''$处的值小于 $f(x,y)$ 在 $P$ 处的
+值.当一个点 $M$ 从 $P$ 出发沿着射线 $PP''$ 趋于无穷远
+点时,$f(x,y)$ 在 $M$ 处的值肯定是随着 $M$ 的变动而可微地趋于无穷,因此
+根据 Rolle 定理,$f$ 在射线 $PP''$ 上肯定存在另外一
+个异于点 $P$ 的驻点,这与 $f$ 的驻点至多只有一个矛盾.因此假设错误,即 $P$
+是 $f$ 的唯一的极小值点,于是可得 $f$ 在 $P$ 处达到了最小值.\\
+
+由于在 $(x,y)$ 不与 $P_1,P_2,P_3$ 重合时, $f$ 在 $P$ 处达到了最小值,因
+此 $f$ 在 $P$ 处的值比 $f$ 在 $P_1$ 的任意小
+邻域内除了 $P_1$ 外的任意点处的值都要小,由于 $f$ 是连续函数,因此 $f$
+在 $P_1$ 处的值比 $f$ 在 $P$ 处的值要小.同理可得 $f$ 在 $P_2,P_3$ 处的
+值比 $f$ 在 $P$ 处的值要小.\\
+
+综上所述,$f$ 在 $P$ 处达到最小值.
+\begin{figure}[h]
+  \newrgbcolor{qqwuqq}{0 0.39 0}
+  \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt
+    0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+  \begin{pspicture*}(-0.98,-3.56)(15.17,3.64)
+    \psline(3.42,1.98)(7.7,-1.8) \psline(7.7,-1.8)(10.4,2.18)
+    \psline(10.4,2.18)(3.42,1.98) \psline(3.42,1.98)(7.48,0.14)
+    \psline(7.48,0.14)(7.7,-1.8) \psline(7.48,0.14)(10.4,2.18)
+    \pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{2.7160175613948168}{4.8104126637880125}{0.35*cos(t)+7.48|0.35*sin(t)+0.14}\lineto(7.48,0.14)\closepath}
+    \pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{0.6108754339091808}{2.705270536302376}{0.35*cos(t)+7.48|0.35*sin(t)+0.14}\lineto(7.48,0.14)\closepath}
+    \pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{-1.4596816038600209}{0.6108754339091811}{0.35*cos(t)+7.48|0.35*sin(t)+0.14}\lineto(7.48,0.14)\closepath}
+    \begin{scriptsize}
+      \psdots[dotstyle=*,linecolor=blue](3.42,1.98)
+      \rput[bl](3.04,2.08){$P_1$}
+      \psdots[dotstyle=*,linecolor=blue](10.4,2.18)
+      \rput[bl](10.7,2.25){$P_2$}
+      \psdots[dotstyle=*,linecolor=blue](7.7,-1.8)
+      \rput[bl](7.64,-2.05){$P_3$}
+      \psdots[dotstyle=*,linecolor=blue](7.48,0.14)
+      \rput[bl](7.81,0.69){$P$}
+      \rput[bl](7.27,-0.04){\qqwuqq{$\alpha$}}
+      \rput[bl](7.42,0.29){\qqwuqq{$\beta$}}
+      \rput[bl](7.63,0.03){\qqwuqq{$\gamma$}}
+    \end{scriptsize}
+  \end{pspicture*}
+  \caption{}
+  \label{fig:3}
+\end{figure}
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+当 $P_{1}P_{2}P_3$ 不共线,且 形成的三角形的其中一个内角不小
+于$\frac{2\pi}{3}$ 时,如图 \eqref{fig:4},不妨设角 $\angle
+P_{1}P_{3}P_2$不小于 $\frac{2\pi}{3}$.则易得 $P$ 不可能
+在$R_1,R_2,R_3,R_4,R_5,R_6,R_7$ 中的任意一个区域的内部以及边界的同时还
+满足 $\angle P_{1}PP_{2}=\angle P_{2}PP_{3}=\angle
+P_3PP_1=\frac{2\pi}{3}$.此时,$f$ 不可能有驻点,也即 $f$ 在此时无法达到
+最小值.
+\begin{figure}[h]
+  \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt
+    0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+  \begin{pspicture*}(-0.75,-4.67)(21.57,7.51)
+    \psplot{-5.75}{21.57}{(--11.93-1.39*x)/3.5}
+    \psplot{-5.75}{21.57}{(--19.68--0.2*x)/9.4}
+    \psplot{-5.75}{21.57}{(--6.05-1.59*x)/-5.9}
+    \psline[linestyle=dashed,dash=5pt 5pt](3.14,2.16)(10.45,1.07)
+    \psline[linestyle=dashed,dash=5pt 5pt](10.45,1.07)(12.54,2.36)
+    \psline[linestyle=dashed,dash=5pt 5pt](6.64,0.77)(10.45,1.07)
+    \rput[tl](11.89,0.73){$ R_1 $} \rput[tl](15.51,3.03){$ R_2 $}
+    \rput[tl](6.29,4.11){$ R_3 $} \rput[tl](-0.21,3.09){$ R_4 $}
+    \rput[tl](2.07,1.23){$ R_5 $} \rput[tl](6.65,-0.67){$ R_6 $}
+    \rput[tl](7.29,2.09){$ R_7 $}
+    \begin{scriptsize}
+      \psdots[dotstyle=*,linecolor=blue](3.14,2.16)
+      \rput[bl](2.65,2.35){$P_1$}
+      \psdots[dotstyle=*,linecolor=blue](12.54,2.36)
+      \rput[bl](12.75,2.43){$P_2$}
+      \psdots[dotstyle=*,linecolor=blue](6.64,0.77)
+      \rput[bl](6.55,0.27){$P_3$}
+      \psdots[dotstyle=*,linecolor=blue](10.45,1.07)
+      \rput[bl](10.33,0.53){$P$}
+    \end{scriptsize}
+  \end{pspicture*}
+  \caption{}
+  \label{fig:4}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+此时,方程 \eqref{eq:1} 无解,也即 $\frac{\pa
+  f}{\pa x},\frac{\pa f}{\pa y}$ 不可能同时为 $0$,此时,根据隐函数定理容
+易得出,$f(x,y)=C$ 确定了 $x$ 和 $y$ 之间的连续可微的函数关
+系,可见$f(x,y)=C$ 在此时是一条光滑的曲线,且通过圆的中心 $P$.且 我们有如
+下结论:
+\begin{theorem}
+  任意给定一个以 $P$ 为圆心的圆以及圆外不共线的
+  点 $P_{1},P_{2},P_{3}$,如果三角形 $P_{1}P_{2}P_3$ 的一个内角不小
+  于 $\frac{2\pi}{3}$,则
+\end{theorem}
+
+
+
+
+反之,若$P_1,P_2,P_3$ 是共线的,那么 \eqref{eq:1} 不可能有
+解,也即 $\frac{\pa f}{\pa x},\frac{\pa f}{\pa y}$ 不可能同时为 $0$,此
+时,根据隐函数定理容易得出,$f(x,y)=C$ 确定了 $x$ 和 $y$ 之间的连续可微的
+函数关系,可见$f(x,y)=C$ 在 $P_1,P_2,P_3$ 共线时是一条光滑的曲线,且通过
+圆的中心 $P$.且根据对称性,$f(x,y)=C$ 必定过圆的中心 $P$ 关于直
+线 $P_1P_2P_3$ 的镜面对称点$P'$,易得 $P'$ 在圆外,因此 $f(x,y)=C$ 也经过
+圆之外.根据连续函数的介值定理,$f(x,y)=C$ 必与圆相交.因此我们就得到了如
+下结果:
+\begin{theorem}
+  任意给一个以 $P$ 为圆心的圆以及圆外三个共线的点 $P_1,P_2,P_3$,则必定
+  在圆上存在点 $K$,使得
+$$
+|PP_1|+|PP_2|+|PP_3|=|KP_1|+|KP_2|+|KP_3|.
+$$
+\end{theorem}
+\bigskip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

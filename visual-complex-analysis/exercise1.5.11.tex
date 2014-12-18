@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.11}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+用几何方法解释,何以适合
+$$
+\arg \left(\frac{z-a}{z-b}\right)=const.
+$$
+的 $z$ 的轨迹是过定点 $a$ 和 $b$ 的一段圆弧.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+由图易得 $\angle aAb=2\alpha$.\\
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\newrgbcolor{qqwuqq}{0 0.39 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-6.5,-6.18)(17.34,7.57)
+\pscircle(0.16,-0.06){5.13}
+\psline(-2.08,4.55)(4.48,2.71)
+\psline(-2.08,4.55)(-3.89,3.09)
+\psplot[linestyle=dashed,dash=5pt 5pt]{-3.89}{17.34}{(--11.29--1.47*x)/1.81}
+\pscustom[linecolor=qqwuqq,fillcolor=qqwuqq,fillstyle=solid,opacity=0.1]{\parametricplot{-0.27456762732897516}{0.6811556330533943}{0.68*cos(t)+-2.08|0.68*sin(t)+4.55}\lineto(-2.08,4.55)\closepath}
+\psline(-3.89,3.09)(0.16,-0.06)
+\psline(4.48,2.71)(0.16,-0.06)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](0.16,-0.06)
+\rput[bl](0.25,0.07){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=xdxdff](-3.89,3.09)
+\rput[bl](-3.79,3.21){\xdxdff{$a$}}
+\psdots[dotstyle=*,linecolor=xdxdff](4.48,2.71)
+\rput[bl](4.56,2.85){\xdxdff{$b$}}
+\psdots[dotstyle=*,linecolor=xdxdff](-2.08,4.55)
+\rput[bl](-1.99,4.68){\xdxdff{$C$}}
+\psdots[dotstyle=*,linecolor=xdxdff](2.26,8.07)
+\rput[bl](6.98,7.09){\xdxdff{$D$}}
+\rput[bl](-1.83,4.34){\qqwuqq{$\alpha$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+

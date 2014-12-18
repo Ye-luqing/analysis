@@ -1,0 +1,71 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+% \newcommand\sign{\hbox{sign}}
+
+%\subjclass{15A52}
+
+\def\x{{\bf X}}
+\def\y{{\bf Y}}
+% \def\I#1{{\bf 1}_{#1}}
+\def\mb{\mbox}
+
+% \swapnumbers
+% \pagestyle{headings}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{A geometrical proof of d'Alembert's lemma}
+
+\author{Luqing Ye}
+\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+% \thanks{}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+
+
+d'Alembert's lemma is stated as follows:
+\begin{lemma}[d'Alembert's lemma\cite{JH}]
+  If $p(z)$ is a nonconstant polynomial function and $p(z_0)\neq
+  0$,then any neighborhood of $z_0$ contains a point $z_1$ such that $|p(z_1)|<|p(z_0)|$.
+\end{lemma}
+
+A proof of this lemma can be found in \cite{JH}.
+
+
+
+\begin{thebibliography}{1}
+\bibitem{JH}John Stillwell.Mathematics and Its History[M]. third edition. New York:Springer, 2010:287-294.
+\end{thebibliography}
+\end{document}

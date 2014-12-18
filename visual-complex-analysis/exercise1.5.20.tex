@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.20}}} \author{\small{叶卢庆\footnote{叶卢
+      庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在
+      读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学
+      院,浙江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+  证明不可能画出一个三顶点均为高斯整数的等边三角形.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+  等边三角形的三个顶点按照逆时针方向放置设
+  为$A=a_1+a_2i,B=b_1+b_2i,C=c_1+c_2i$,其中
+  $a_1,a_2,b_1,b_2,c_1,c_2\in \mathbf{Z}$.则有
+$$
+A+\omega B+\omega^2C=0.
+$$
+其中 $\omega$ 为三次单位根.于是
+$$
+A+(-\frac{1}{2}+\frac{\sqrt{3}}{2}i)B+(-\frac{1}{2}-\frac{\sqrt{3}}{2})C=0.
+$$
+我们发现了无理数 $\sqrt{3}$,以及单独的 $A$,这是不可能的.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+

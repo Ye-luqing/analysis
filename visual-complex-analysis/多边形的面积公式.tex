@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{封闭不自交的四边形的面积公式}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+设 $A_1A_2A_3A_4A_1$ 是个一封闭的四边形,且该四边形的边除顶点之外互
+不相交.下面我们来求其面积表达式.如图,当原点 $O$ 位于四边形的内部或边界
+时,显然四边形的面积为
+\begin{align*}
+  \frac{1}{2}|OB\times OA+OA\times OD+OD\times OC+OC\times OB|
+\end{align*}
+易得如果原点$O$ 位于四边形外面,上面公式依然成立.\\
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.84,-7.66)(29.74,10.88)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](2.06,0.92)(5.7,4.98)(10.75,0.8)(5.54,-0.35)
+\psline[linecolor=zzttqq](2.06,0.92)(5.7,4.98)
+\psline[linecolor=zzttqq](5.7,4.98)(10.75,0.8)
+\psline[linecolor=zzttqq](10.75,0.8)(5.54,-0.35)
+\psline[linecolor=zzttqq](5.54,-0.35)(2.06,0.92)
+\psline{->}(6.67,1.38)(5.7,4.98)
+\psline{->}(6.67,1.38)(2.06,0.92)
+\psline{->}(6.67,1.38)(10.75,0.8)
+\psline{->}(6.67,1.38)(5.54,-0.36)
+\psplot{-11.84}{29.74}{(--5.82-1.27*x)/3.48}
+\psplot{-11.84}{29.74}{(-8.24--1.16*x)/5.21}
+\psplot{-11.84}{29.74}{(-48.92--4.18*x)/-5.05}
+\psplot{-11.84}{29.74}{(--5.01-4.06*x)/-3.64}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.06,0.92)
+\rput[bl](2.19,1.11){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](5.7,4.98)
+\rput[bl](5.81,5.16){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](10.75,0.8)
+\rput[bl](10.87,0.99){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](5.54,-0.35)
+\rput[bl](5.66,-0.17){\blue{$D$}}
+\psdots[dotstyle=*,linecolor=blue](6.67,1.38)
+\rput[bl](6.79,1.57){\blue{$O$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{document}
+
+
+
+
+
+
+
+

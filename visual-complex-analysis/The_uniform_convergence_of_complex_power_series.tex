@@ -1,0 +1,265 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand\pa{{\mathbb{\partial}}}
+\newcommand\va{{\varepsilon}}
+\newcommand\C{{\mathbb{C}}}
+\newcommand\Z{{\mathbf{Z}}}
+\newcommand\D{{\mathbf{D}}}
+\newcommand\Q{{\mathbf{Q}}}
+\newcommand\G{{\mathbf{G}}}
+\newcommand\I{{\mathbf{I}}}
+\renewcommand\P{{\mathbf{P}}}
+\newcommand\E{{\mathbf{E}}}
+\newcommand\U{{\mathbf{U}}}
+\newcommand\A{{\mathbf{A}}}
+\newcommand\Var{\mathbf{Var}}
+\renewcommand\Im{{\operatorname{Im}}}
+\renewcommand\Re{{\operatorname{Re}}}
+\newcommand\eps{{\varepsilon}}
+\newcommand\trace{\operatorname{trace}}
+\newcommand\tr{\operatorname{trace}}
+\newcommand\dist{\operatorname{dist}}
+\newcommand\Span{\operatorname{Span}}
+\newcommand\sgn{\operatorname{sgn}}
+
+\renewcommand\a{x}
+\renewcommand\b{y}
+
+\newcommand\sign{{\operatorname{sign}}}
+\newcommand\Dyson{{\operatorname{Sine}}}
+\renewcommand\th{{\operatorname{th}}}
+
+
+
+\newcommand\condo{{{\bf C0}}}
+\newcommand\condone{{{\bf C1}}}
+
+% \newcommand\bm{{\mathbf{m}}}
+\newcommand\dd{\partial}
+\newcommand\smd{\hbox{smd}}
+\newcommand\Ba{{\mathbf a}}
+\newcommand\Bb{{\mathbf b}}
+\newcommand\Bc{{\mathbf c}}
+\newcommand\Bd{{\mathbf d}}
+\newcommand\Be{{\mathbf e}}
+\newcommand\Bf{{\mathbf f}}
+\newcommand\Bg{{\mathbf g}}
+\newcommand\Bh{{\mathbf h}}
+\newcommand\Bi{{\mathbf i}}
+\newcommand\Bj{{\mathbf j}}
+\newcommand\Bk{{\mathbf k}}
+\newcommand\Bl{{\mathbf l}}
+\newcommand\Bm{{\mathbf m}}
+\newcommand\Bn{{\mathbf n}}
+\newcommand\Bo{{\mathbf o}}
+\newcommand\Bp{{\mathbf p}}
+\newcommand\Bq{{\mathbf q}}
+\newcommand\Bs{{\mathbf s}}
+\newcommand\Bt{{\mathbf t}}
+\newcommand\Bu{{\mathbf u}}
+\newcommand\Bv{{\mathbf v}}
+\newcommand\Bw{{\mathbf w}}
+\newcommand\Bx{{\mathbf x}}
+\newcommand\By{{\mathbf y}}
+\newcommand\Bz{{\mathbf z}}
+\newcommand\p{{\mathbf p}}
+\newcommand\bi{{\mathbf i}}
+% 
+
+\newcommand\BA{{\mathbf A}}
+\newcommand\BB{{\mathbf B}}
+\newcommand\BC{{\mathbf C}}
+\newcommand\BD{{\mathbf D}}
+\newcommand\BE{{\mathbf E}}
+\newcommand\BF{{\mathbf F}}
+\newcommand\BG{{\mathbf G}}
+\newcommand\BH{{\mathbf H}}
+\newcommand\BI{{\mathbf I}}
+\newcommand\BJ{{\mathbf J}}
+\newcommand\BK{{\mathbf K}}
+\newcommand\BL{{\mathbf L}}
+\newcommand\BM{{\mathbf M}}
+\newcommand\BN{{\mathbf N}}
+\newcommand\BO{{\mathbf O}}
+\newcommand\BP{{\mathbf P}}
+\newcommand\BQ{{\mathbf Q}}
+\newcommand\BS{{\mathbf S}}
+\newcommand\BT{{\mathbf T}}
+\newcommand\BU{{\mathbf U}}
+\newcommand\BV{{\mathbf V}}
+\newcommand\BW{{\mathbf W}}
+\newcommand\BX{{\mathbf X}}
+\newcommand\BY{{\mathbf Y}}
+\newcommand\BZ{{\mathbf Z}}
+\renewcommand\Pr{{\mathbf P }}
+
+% cal letter
+
+\newcommand\CA{{\mathcal A}}
+\newcommand\CB{{\mathcal B}}
+\newcommand\CC{{\mathcal C}}
+\newcommand\CD{{\mathcal D}}
+\newcommand\CE{{\mathcal E}}
+\newcommand\CF{{\mathcal F}}
+\newcommand\CG{{\mathcal G}}
+\newcommand\CH{{\mathcal H}}
+\newcommand\CI{{\mathcal I}}
+\newcommand\CJ{{\mathcal J}}
+\newcommand\CK{{\mathcal K}}
+\newcommand\CL{{\mathcal L}}
+\newcommand\CM{{\mathcal M}}
+\newcommand\CN{{\mathcal N}}
+\newcommand\CO{{\mathcal O}}
+\newcommand\CP{{\mathcal P}}
+\newcommand\CQ{{\mathcal Q}}
+\newcommand\CS{{\mathcal S}}
+\newcommand\CT{{\mathcal T}}
+\newcommand\CU{{\mathcal U}}
+\newcommand\CV{{\mathcal V}}
+\newcommand\CW{{\mathcal W}}
+\newcommand\CX{{\mathcal X}}
+\newcommand\CY{{\mathcal Y}}
+\newcommand\CZ{{\mathcal Z}}
+
+% number theory
+
+\newcommand\BBN{{\mathbb N}}
+\newcommand\BBQ {{\mathbb Q}}
+\newcommand\BBI {{\mathbb I}}
+\newcommand\BBR {{\mathbb R}}
+\newcommand\BBZ {{\mathbb Z}}
+\newcommand\BBC{{\mathbb C}}
+% tilde
+
+\newcommand\ta{{\tilde a}}
+\newcommand\tb{{\tilde b}}
+\newcommand\tc{{\tilde c}}
+\newcommand\td{{\tilde d}}
+\newcommand\te{{\tilde e}}
+\newcommand\tf{{\tilde f}}
+\newcommand\tg{{\tilde g}}
+% \newcommand\th{{\tilde h}}
+\newcommand\ti{{\tilde i}}
+\newcommand\tj{{\tilde j}}
+\newcommand\tk{{\tilde k}}
+\newcommand\tl{{\tilde l}}
+\newcommand\tm{{\tilde m}}
+\newcommand\tn{{\tilde n}}
+% \newcommand\to{{\tilde o}}
+\newcommand\tp{{\tilde p}}
+\newcommand\tq{{\tilde q}}
+\newcommand\ts{{\tilde s}}
+% \newcommand\tt{{\tilde t}}
+\newcommand\tu{{\tilde u}}
+\newcommand\tv{{\tilde v}}
+\newcommand\tw{{\tilde w}}
+\newcommand\tx{{\tilde x}}
+\newcommand\ty{{\tilde y}}
+\newcommand\tz{{\tilde z}}
+\newcommand\ep{{\epsilon}}
+
+% \newcommand\sign{\hbox{sign}}
+
+
+
+\def\x{{\bf X}}
+\def\y{{\bf Y}}
+% \def\I#1{{\bf 1}_{#1}}
+\def\mb{\mbox}
+\newcommand\cl{{\operatorname{cl}}}
+\renewcommand\sc{{\operatorname{sc}}}
+\newcommand\Ai{{\operatorname{Ai}}}
+\newcommand\Sine{{\operatorname{Sine}}}
+
+% \swapnumbers
+% \pagestyle{headings}
+\parindent = 5 pt
+\parskip = 12 pt
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
+
+\begin{document}
+
+\title{The uniform convergence of complex power series}
+
+\author{Luqing Ye}
+\address{College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
+% \thanks{}
+
+\maketitle
+
+\setcounter{tocdepth}{2}
+% \tableofcontents
+A complex power series $P(z)$ centering at the origin is an expression of the form
+$$P(z)=c_{0}+c_{1}z+c_{2}z^{2}+c_{3}z^{3}+\cdots,$$
+where the $c_{j}$'s are complex constants,and $z$ is a complex variable.In this note we prove the following theorem,which can be found at \cite{visual}.
+\begin{theorem}
+  If $P(z)$ is a complex power series centered at the origin,and
+  $P(z)$ has disc of convergence $D=\{z:|z|<R\}$,then $P(z)$ is uniformly
+  convergent on the closed disc $C=\{z:|z|\leq r\}$,where $r<R$.
+\end{theorem}
+\begin{proof}
+For any given $\varepsilon>0$,and any given positive integer $n$,let's see the set 
+$$
+A_{\varepsilon,n}=\{z:|z|\leq r,|P_n(z)-P(z)|<\varepsilon\}.
+$$
+We first prove that $A_n$ is an open set of $C$.In order to prove
+this,we only need to prove that $P(z)$ is a continuous function on $C$,i.e,
+\begin{equation}\label{eq:1}
+\lim_{\Delta z\to 0;z\in C,z+\Delta z\in C} P(z+\Delta z)=P(z),
+\end{equation}
+which is equivalent to 
+$$
+\lim_{\Delta z\to 0;P(z)\neq 0;z\in C,z+\Delta z\in
+  C}\frac{P(z+\Delta z)}{P(z)}=1,
+$$
+which is equivalent to
+$$
+\lim_{\Delta z\to
+  0;P(z)\neq 0;z\in C,z+\Delta z\in
+  C}\frac{c_0+c_1(z+\Delta
+  z)+c_2(z+\Delta z)^2+\cdots+c_{n}(z+\Delta z)^n+\cdots}{c_0+c_1z+\cdots+c_nz^n+\cdots}=1.
+$$
+
+
+\end{proof}
+
+
+\begin{thebibliography}{1}
+
+\bibitem{visual}Needham T. Visual Complex Analysis[M]. New York:Oxford University Press, 1997:70
+
+\end{thebibliography}
+\end{document} 
+
+
+\begin{align*}
+  P(z+\Delta z)&=c_0+c_1(z+\Delta z)+c_2(z+\Delta z)^2+c_3(z+\Delta
+  z)^{3}+\cdots+c_n(z+\Delta
+  z)^n+\cdots\\&=(c_0+c_1z+c_2z^2+\cdots+c_nz^n+\cdots)+(c_1+2c_2z+3c_3z^{2}+\cdots+nc_nz^{n-1}+\cdots)\Delta z+
+\end{align*}

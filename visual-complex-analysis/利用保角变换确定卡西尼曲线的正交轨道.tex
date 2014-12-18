@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theorem}{定理}
+\newtheorem*{lemma}{引理}
+\newtheorem*{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem*{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{利用保角变换确定卡西尼曲线的正交轨道\footnote{本文作为交给尤英
+        老师的复变作业.}}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,数学112,学号:1002011005}}}
+\maketitle
+我们设平面直角坐标系上有点 $(a,0)$,$(-a,0)$.下面我们来求到这两个点的距
+离乘积为 $k(k>0)$ 的所有点形成的曲线的方程.这个曲线叫做卡西尼曲线.可得
+$$
+\sqrt{(x-a)^2+y^2}\sqrt{(x+a)^2+y^2}=k.
+$$
+于是
+$$
+[(x-a)^2+y^2][(x+a)^2+y^2]=k^2.
+$$
+于是
+$$
+(x^2-a^2)^2+y^2((x-a)^2+(x+a)^2)+y^4=k^2.
+$$
+于是
+$$
+(x^2-a^2)^2+2y^2(x^2+a^2)+y^4=k^2.
+$$
+这就是卡西尼曲线的直角坐标方程.把 $(x^2-a^2)^2+2y^2(x^2+a^2)+y^4-k^2=0$ 记为 $f(x,y)=0$.易得 $f$ 在
+$xy$ 平面上连续可微,且当 $y\neq
+0$ 时,
+$$
+\frac{\pa f}{\pa y}=4y(x^2+a^2+y^2)\neq 0,
+$$
+因此根据隐函数定理,当 $y\neq 0$ 时,
+\begin{equation}
+  \label{eq:1}
+  \frac{\pa y}{\pa x}=\frac{- \frac{\pa f}{\pa x}}{\frac{\pa f}{\pa y}}=-\frac{x(x^2+y^2-a^2)}{y(x^2+y^2+a^2)}.
+\end{equation}
+因此在同一点,当 $x,y\neq 0,x^2+y^2\neq a^2$ 时,卡西尼曲线的正交轨道(orthogonal trajectory)的切线斜率为
+\begin{equation}
+  \label{eq:2}
+  \frac{y(x^2+y^2+a^2)}{x(x^2+y^2-a^2)}.
+\end{equation}
+下面我们来解微分方程
+$$
+\frac{dy}{dx}=  \frac{y(x^2+y^2+a^2)}{x(x^2+y^2-a^2)}.
+$$
+使用机器可以求得解为
+$$
+y=\frac{1}{2}(c_1 x\pm\sqrt{-4 a^2+c_1^2 x^2+4 x^2}),
+$$
+其中 $c_1$ 为常数.进一步化简可得
+$$
+y^2-x^2+a^2-c_1xy=0.
+$$
+\newline
+
+我们不太喜欢用机器求解.下面我们利用保角映射导出相应结论.我们将卡西尼曲
+线的方程用复数形式来表达,可得
+\begin{equation}
+  \label{eq:3}
+  |z-a||z+a|=k,
+\end{equation}
+即
+\begin{equation}
+  \label{eq:4}
+  |(z-a)(z+a)|=k.
+\end{equation}
+我们对复平面进行变换$f$,其中 $f(z)=(z-a)(z+a)$,则卡西尼曲线\eqref{eq:4} 变
+为
+$$
+|w|=k.
+$$
+这是一个半径长度为 $k$ 的圆.当 $k$ 变化时,形成一个圆族.该圆族的正交轨
+线易得为任意经过原点的直线.经过原点的非竖直的直线的复数表达式为
+\begin{equation}\label{eq:5}
+|z-\overline{z}|=p|z+\overline{z}|,p\geq 0.
+\end{equation}
+下面我们考虑变换 $f$ 的逆变换,易得为 $f^{-1}(z)=\pm\sqrt{z+a^2}$.直线 \eqref{eq:5} 在逆变换下变为
+\begin{equation}
+  \label{eq:6}
+  |z^2-a^2-\overline{z^2}+\overline{a^2}|=p|z^2-a^2+\overline{z^2}-\overline{a^2}|.
+\end{equation}
+比方说,在 \eqref{eq:6} 中,令 $p=0$,\eqref{eq:6} 会变为
+\begin{equation}
+  \label{eq:7}
+  z^2-\overline{z}^2=a^2-\overline{a}^2.
+\end{equation}
+\eqref{eq:7} 是卡西尼曲线的一个特殊的正交轨道.\eqref{eq:6} 式中每个确
+定的 $p$ 都会确定卡西尼曲线的一个正交轨道,这是因为,映射 $f$ 和
+$f^{-1}$ 都是复平面上的保角变换.
+\end{document}
+
+
+
+
+
+
+
+

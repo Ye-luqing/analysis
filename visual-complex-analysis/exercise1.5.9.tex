@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{example}{例}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}
+\begin{document}
+\title{\huge{\bf{习题1.5.9}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}}
+\maketitle
+\begin{exercise}
+  令 $A,B,C,D$ 为单位圆上四点,且 $A+B+C+D=0$,证明这四点必成一矩形.
+\end{exercise}
+\begin{proof}[\textbf{证明}]
+由于 $A,B,C,D$ 为单位圆上的四点, $A=\cos\theta_A+i\sin\theta_A$,
+其余各点类似.则我们有
+$$
+\begin{cases}
+  \cos\theta_A+\cos\theta_B+\cos\theta_C+\cos\theta_D=0,\\
+  \sin\theta_A+\sin\theta_B+\sin\theta_C+\sin\theta_D=0.
+\end{cases}.
+$$
+进行和差化积,上面两条等式可以化为
+$$
+\begin{cases}
+  \cos \frac{\theta_A+\theta_C}{2}\cos \frac{\theta_A-\theta_C}{2}+\cos
+  \frac{\theta_B+\theta_D}{2}\cos\frac{\theta_B-\theta_D}{2}=0,\\
+\sin \frac{\theta_A+\theta_C}{2}\cos \frac{\theta_A-\theta_C}{2}+\sin \frac{\theta_B+\theta_D}{2}\cos \frac{\theta_B-\theta_D}{2}=0.
+\end{cases}
+$$
+将第一条式子乘以 $\sin \frac{\theta_A+\theta_C}{2}$,可得
+$$
+\cos \frac{\theta_A+\theta_C}{2}\sin \frac{\theta_A+\theta_C}{2}\cos \frac{\theta_A-\theta_C}{2}+\sin
+\frac{\theta_A+\theta_C}{2}\cos \frac{\theta_B+\theta_D}{2}\cos \frac{\theta_B-\theta_D}{2}=0,
+$$
+将第二条式子代进上式,可得
+$$
+-\sin \frac{\theta_B+\theta_D}{2}\cos \frac{\theta_B-\theta_D}{2}\cos \frac{\theta_A+\theta_C}{2}+\sin
+\frac{\theta_A+\theta_C}{2}\cos \frac{\theta_B+\theta_D}{2}\cos \frac{\theta_B-\theta_D}{2}=0.
+$$
+也即,
+$$
+\cos \frac{\theta_B-\theta_D}{2}\sin \frac{\theta_A+\theta_C-\theta_B-\theta_D}{2}=0.
+$$
+不妨设 $\theta_A,\theta_B,\theta_C,\theta_D\in [0,2\pi]$,且 $\theta_A<\theta_B<\theta_C<\theta_D$.则
+$\theta_B-\theta_D=-\pi$,或者
+$\theta_A+\theta_C-\theta_B-\theta_D=- 2\pi$.如果是
+$\theta_B-\theta_D=-\pi$,则根据对称性,必定也有
+$\theta_A-\theta_C=-\pi$,此时是矩形.下面我们来证明,
+$\theta_A+\theta_C-\theta_B-\theta_D=-2\pi$ 是不可能的,因为$A,B,C,D$
+在四个象限都有分布(可以包括坐标轴),$\theta_{A}$ 最小为0,$\theta_C$ 最
+小为 $\pi$,$\theta_B$ 最大为 $\pi$($\theta_C,\theta_B$ 由于不能重合,因
+此必有一个无法达到 $\pi$),$\theta_D$ 最大为$2\pi$($\theta_A,\theta_D$
+不可能一者为 $0$ 一者为 $2\pi$),因此
+$\theta_A+\theta_C-\theta_B-\theta_D$ 最小也不可能达到 $-2\pi$,因此不
+可能.综上我们已经证明了四个点形成矩形.
+\end{proof}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
