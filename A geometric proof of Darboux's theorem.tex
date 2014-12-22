@@ -1,16 +1,39 @@
-\documentclass{article} \usepackage{maa-monthly}
+\documentclass{amsart}
 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
 
-\theoremstyle{theorem} \newtheorem*{theorem}{Theorem}
+\parindent = 5 pt
+\parskip = 12 pt
+\theoremstyle{plain}
 
-\theoremstyle{definition} \newtheorem*{definition}{Definition}
-\newtheorem*{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+\include{psfig}
 
 \begin{document}
-
 \title{A geometric proof of Darboux's theorem}
-
 \author{Luqing Ye}
+\address{An undergrad at College of Science, Hangzhou Normal University,Hangzhou City,Zhejiang Province,China}
+\email{yeluqingmathematics@gmail.com}
 
 \maketitle
 
@@ -24,10 +47,10 @@ theorem,we provide a geometric proof of Darboux's theorem.
 In this note we give a geometric proof of Darboux's theorem,with
 the aid of Lagrange's mean value theorem and the intermediate value
 theorem.After I completed the proof,I found that the proof is
-essentially not new,Lars Olsen had already provided an extremely
-similar proof in \cite{Lars}.However,I decide to publish my proof
+essentially not new,Lars Olsen had already provided a very
+similar proof in \cite{Lars}.However,I decided to publish my proof
 because its geometric feature,and after all,there are slight
-differences between our approach.
+differences between our approaches.
 
 Darboux's theorem,which shows the intermediate property of
 derivatives,can be stated as below.
@@ -62,6 +85,12 @@ differentiable function,and $f'(a)<f'(b)$.Then $\forall t\in
 f'(\xi_1)=\mbox{the slope of the line} ~AD.
 \end{equation}
 
+\begin{figure}[h]\centering
+\includegraphics[width=0.5\textwidth]{A_geometric_proof_of_Darboux_theorem2.png}
+  \caption{}
+  \label{fig:2}
+\end{figure}
+
 Similary,as shown in figure \eqref{fig:2},for an arbitrary point $D'$
 on the segment $AC$(excluding points $A,C$),line $BD'$ must intersect with the curve at a
 point $E'(x_e',y_e')$ over the interval $(a,b)$.This is because,the
@@ -84,12 +113,6 @@ Also,according to Lagrange's mean value theorem,there exists $\xi_3\in
   f'(\xi_3)=\mbox{the slope of the line}~AB.
 \end{equation}
 
-\begin{figure}[h]\centering
-\includegraphics[width=0.5\textwidth]{A_geometric_proof_of_Darboux_theorem2.png}
-  \caption{}
-  \label{fig:2}
-\end{figure}
-
 It can be easily verified from elementary geometry that when $D$ and $D'$ move continuously over the segment $BC$ and $AC$
 respectively,with the extreme points of both segments excluded,we have
 \begin{align*}
@@ -103,9 +126,4 @@ So Darboux's theorem is finally proved by combining this relationship with  equa
 \begin{thebibliography}{1}
 \bibitem{Lars} Lars Olsen , A New Proof of Darboux's Theorem ,\textit{Amer. Math. Monthly},\textbf{111} (2004)713--715.
 \end{thebibliography}
-
-\begin{biog}
-\item[Luqing Ye] (yeluqingmathematics@gmail.com) is an undergraduate
-  student at Hangzhou Normal University in Hangzhou,Zhejiang Province,China.
-\end{biog}
 \end{document}
