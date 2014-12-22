@@ -96,4 +96,37 @@ $a_i+\Delta x_i$和$a_i$之间的数$a_i'$,使得式\eqref{eq:1}等于
 $a_j$,$a_i'$趋于$a_i$时,式\eqref{eq:3}确实会趋于$\frac{\pa }{\pa
   x_j}\frac{\pa f}{\pa x_i}$.这样就完成了证明.
 \end{proof}
+上面的证明是基于Lagrange中值定理的.下面我们再给出一个基于定积分的证明.为
+此,我们先叙述一个引理.这个引理根据微积分第二基本定理是显然的.
+\begin{lemma}
+ 定义在闭区间$I=[a,b]$上的实值连续函数$f$和$g$.$f=g$当且仅当$\forall
+ t\in [a,b]$,
+$$
+\int_a^tf(x)dx=\int_a^tg(x)dx.
+$$
+\end{lemma}
+有了这个引理之后我们再来证明Clairaut定理.
+\begin{proof}[\textbf{证明}]
+将函数$\frac{\pa }{\pa x_j}\frac{\pa f}{\pa x_i}(x)$沿着
+$x_j$方向积分,积分的范围是$x_j\in [a_j,b_j]$,根据微积分第一基本定理,我们会得到
+\begin{equation}\label{eq:4}
+\int_{a_j}^{b_j}\frac{\pa}{\pa x_j}\frac{\pa f}{\pa
+  x_i}(x)dx_j=\frac{\pa f}{\pa
+  x_i}(x_1,\cdots,b_j,\cdots,x_i,\cdots,x_n)-\frac{\pa f}{\pa x_i}(x_1,\cdots,a_j,\cdots,x_i,\cdots,x_n).
+\end{equation}
+再将
+$$
+\frac{\pa f}{\pa
+  x_i}(x_1,\cdots,b_j,\cdots,x_i,\cdots,x_n)-\frac{\pa f}{\pa x_i}(x_1,\cdots,a_j,\cdots,x_i,\cdots,x_n)
+$$
+沿着$x_i$方向积分,积分的范围是$[a_i,b_i]$,可得
+\begin{align*}
+&\int_{a_{i}}^{b_{i}}\left[\frac{\pa f}{\pa
+  x_i}(x_1,\cdots,b_j,\cdots,x_i,\cdots,x_n)-\frac{\pa f}{\pa x_i}(x_1,\cdots,a_j,\cdots,x_i,\cdots,x_n)\right]dx_i\\&=f(x_1,\cdots,b_j,\cdots,b_i,\cdots,x_n)-f(x_1,\cdots,b_j,\cdots,a_i,\cdots,x_n)\\&-f(x_1,\cdots,a_j,\cdots,b_i,\cdots,x_n)+f(x_1,\cdots,a_j,\cdots,a_i,\cdots,x_n).
+\end{align*}
+由于定积分和求导可以互相交换,因此我们对函数$\frac{\pa }{\pa
+  x_i}\frac{\pa f}{\pa x_j}(x)$进行和函数$\frac{\pa }{\pa
+  x_j}\frac{\pa f}{\pa x_i}(x)$同样的操作会得到同样的结果.由于这两个函
+数都连续,因此根据引理,可得这两个函数在定义域上相等.
+\end{proof}
 \end{document}
