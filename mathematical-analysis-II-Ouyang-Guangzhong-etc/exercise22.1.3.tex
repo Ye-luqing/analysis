@@ -1,0 +1,342 @@
+\documentclass[twoside,11pt]{article} 
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{CJKutf8}
+\usepackage{xeCJK}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{exercise}{习题}
+\newtheorem{remark}{注}
+\usepackage{pstricks-add}
+\pagestyle{empty}
+\setCJKmainfont[BoldFont=Adobe Heiti Std R]{Adobe Song Std L}
+% \usepackage{latexdef}
+\def\ZZ{\mathbb{Z}} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth 0.00in \marginparsep 0.00in
+\textwidth 16cm \textheight 24cm \newcommand{\D}{\displaystyle}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献} \def \qed {\hfill \vrule height6pt
+  width 6pt depth 0pt} \topmargin -0.40in \oddsidemargin 0.08in
+\evensidemargin 0.08in \marginparwidth0.00in \marginparsep 0.00in
+\textwidth 15.5cm \textheight 24cm \pagestyle{myheadings}
+\markboth{\rm \centerline{}} {\rm \centerline{}}
+\begin{document}
+\title{\huge{\bf{习题22.1.3}}} \author{\small{叶卢
+    庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业
+      本科在读,E-mail:h5411167@gmail.com}}\\{\small{杭州师范大学理学院,浙
+      江~杭州~310036}}} \date{}
+\maketitle
+
+% ----------------------------------------------------------------------------------------
+% ABSTRACT AND KEYWORDS
+% ----------------------------------------------------------------------------------------
+
+
+
+\vspace{30pt} % Some vertical space between the abstract and first section
+
+% ----------------------------------------------------------------------------------------
+% ESSAY BODY
+% ----------------------------------------------------------------------------------------
+\begin{exercise}
+  证明若 $C$ 为平面上的封闭曲线,$l$ 为任意方向,则
+$$
+\oint_C\cos (\mathbf{l,n})dS=0,
+$$
+其中 $n$ 为 $C$ 的外法线方向.
+\end{exercise}
+\begin{remark}
+  我认为,此题条件不足,光是 $C$ 为封闭曲线还不足以保证 $C$ 有外法线.不
+  妨加上条件:$C$ 为平面上的逐段光滑封闭曲线.
+\end{remark}
+\begin{proof}[解]
+貌似是挺有意思的一个结果.我们先考察简单情形的,如果 $C$ 是平面上的一个
+三角形.而且不妨设 $l$ 的方向为 $X$ 轴正方向(为什么可以这样设?).不妨设
+曲线 $C$ 的方向为 $A_1A_3A_2A_1$.显然,对于第一幅图来说,
+$$
+|A_3F|+(-|A_3D|)+(-|A_2A|)=0,
+$$
+而对于第二幅图来说,我们总有
+$$
+|DA_3|+|A_3E|-|A_2F|=0
+$$
+因此,题目中的公式对于三角形总是成立的.
+\begin{center}
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.65,-0.56)(14.77,6.31)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](2.34,3.3)(5.52,4.62)(4.6,-0.04)
+\psline[linecolor=zzttqq](2.34,3.3)(5.52,4.62)
+\psline[linecolor=zzttqq](5.52,4.62)(4.6,-0.04)
+\psline[linecolor=zzttqq](4.6,-0.04)(2.34,3.3)
+\psline{->}(0,0)(6,0)
+\psline{->}(0,0)(0,6)
+\psline{->}(4.06,2.51)(0.66,0)
+\psline{->}(4.06,2.51)(3.23,4.77)
+\psline{->}(4.06,2.51)(5.87,2.11)
+\psline[linestyle=dashed,dash=3pt 3pt](2.34,3.3)(2.35,0)
+\psline{->}(2.34,3.3)(2.35,0)
+\psplot[linestyle=dashed,dash=3pt 3pt]{-0.65}{14.77}{(--18.11-0.01*x)/5.48}
+\psline{->}(5.52,4.62)(5.52,3.3)
+\psline{->}(4.6,-0.04)(5.52,4.62)
+\psline{->}(5.52,4.62)(2.34,3.3)
+\psline{->}(2.34,3.3)(4.6,-0.04)
+\psplot[linestyle=dashed,dash=3pt 3pt]{-0.65}{14.77}{(--6.58--0.01*x)/1.44}
+\psline{->}(5.52,0)(5.52,4.62)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.34,3.3)
+\rput[bl](2.38,3.37){\blue{$A_2$}}
+\psdots[dotstyle=*,linecolor=blue](5.52,4.62)
+\rput[bl](5.57,4.69){\blue{$A_3$}}
+\psdots[dotstyle=*,linecolor=blue](4.6,-0.04)
+\rput[bl](4.64,0.02){\blue{$A_1$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.07){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=blue](4.06,2.51)
+\rput[bl](4.1,2.58){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0.66,0)
+\rput[bl](0.7,0.07){\xdxdff{$n_{A_1A_2}$}}
+\psdots[dotstyle=*,linecolor=blue](3.23,4.77)
+\rput[bl](3.28,4.83){\blue{$n_{A_2A_3}$}}
+\psdots[dotstyle=*,linecolor=blue](5.87,2.11)
+\rput[bl](5.92,2.18){\blue{$n_{A_3A_1}$}}
+\psdots[dotstyle=*,linecolor=xdxdff](2.35,0)
+\rput[bl](2.38,0.07){\xdxdff{$A$}}
+\psdots[dotstyle=*,linecolor=xdxdff](5.52,3.3)
+\rput[bl](5.57,3.37){\xdxdff{$D$}}
+\psdots[dotstyle=*,linecolor=xdxdff](5.52,0)
+\rput[bl](5.57,0.07){\xdxdff{$F$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+\begin{center}
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.25,-0.38)(13.55,6.21)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](6,0)(7.88,3.38)(6.52,4.92)
+\psline[linecolor=zzttqq](6,0)(7.88,3.38)
+\psline[linecolor=zzttqq](7.88,3.38)(6.52,4.92)
+\psline[linecolor=zzttqq](6.52,4.92)(6,0)
+\psline{->}(6.86,2.54)(10.46,0.4)
+\psline{->}(6.86,2.54)(8.54,4.52)
+\psline{->}(6.86,2.54)(4.14,2.94)
+\psline{->}(0,0)(12,0)
+\psline{->}(0,0)(0,6)
+\psplot[linestyle=dashed,dash=3pt 3pt]{-1.25}{13.55}{(--4.45--0.01*x)/1.34}
+\psplot[linestyle=dashed,dash=3pt 3pt]{-1.25}{13.55}{(--8.15-0*x)/1.66}
+\psline{->}(7.87,0)(7.88,3.38)
+\psline{->}(7.88,3.38)(7.87,4.93)
+\psline{->}(6.52,0)(6.52,4.92)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](6,0)
+\rput[bl](6.04,0.06){\blue{$A_1$}}
+\psdots[dotstyle=*,linecolor=blue](7.88,3.38)
+\rput[bl](7.92,3.44){\blue{$A_3$}}
+\psdots[dotstyle=*,linecolor=blue](6.52,4.92)
+\rput[bl](6.56,4.99){\blue{$A_2$}}
+\psdots[dotstyle=*,linecolor=blue](6.86,2.54)
+\rput[bl](6.91,2.61){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](10.46,0.4)
+\rput[bl](10.5,0.46){\blue{$n_{A_3A_1}$}}
+\psdots[dotstyle=*,linecolor=blue](8.54,4.52)
+\rput[bl](8.58,4.59){\blue{$n_{A_2A_3}$}}
+\psdots[dotstyle=*,linecolor=blue](4.14,2.94)
+\rput[bl](4.19,3.01){\blue{$n_{A_1A_2}$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.06){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=xdxdff](12,0)
+\rput[bl](12.04,0.06){\xdxdff{$X$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0,6)
+\rput[bl](0.05,6.06){\xdxdff{$Y$}}
+\psdots[dotstyle=*,linecolor=xdxdff](7.87,0)
+\rput[bl](7.91,0.06){\xdxdff{$D$}}
+\psdots[dotstyle=*,linecolor=xdxdff](7.87,4.92)
+\rput[bl](7.91,4.99){\xdxdff{$E$}}
+\psdots[dotstyle=*,linecolor=xdxdff](6.52,0)
+\rput[bl](6.56,0.06){\xdxdff{$F$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+而当曲线 $C$ 是一般的四边形,且曲线 $C$ 不自交的时候,如下两图所示,可以将四边形分割为两个三角形,从而转化为三角形
+的情形.
+\begin{center}
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.98,-0.61)(13.72,6.39)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.62,3.74)(6.74,5.24)(9.6,3.38)(6,0)
+\psline[linecolor=zzttqq](3.62,3.74)(6.74,5.24)
+\psline[linecolor=zzttqq](6.74,5.24)(9.6,3.38)
+\psline[linecolor=zzttqq](9.6,3.38)(6,0)
+\psline[linecolor=zzttqq](6,0)(3.62,3.74)
+\psline[linestyle=dashed,dash=3pt 3pt](6.74,5.24)(6,0)
+\psline{->}(0,0)(13,0)
+\psline{->}(0,0)(0,6)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](3.62,3.74)
+\rput[bl](3.67,3.81){\blue{$A_1$}}
+\psdots[dotstyle=*,linecolor=blue](6.74,5.24)
+\rput[bl](6.78,5.31){\blue{$A_2$}}
+\psdots[dotstyle=*,linecolor=blue](9.6,3.38)
+\rput[bl](9.64,3.45){\blue{$A_3$}}
+\psdots[dotstyle=*,linecolor=blue](6,0)
+\rput[bl](6.05,0.07){\blue{$A_4$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.07){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=xdxdff](13,0)
+\rput[bl](13.05,0.07){\xdxdff{$X$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0,6)
+\rput[bl](0.05,6.07){\xdxdff{$Y$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+\begin{center}
+\newrgbcolor{zzttqq}{0.6 0.2 0}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-2.18,-0.87)(15.43,6.98)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](4,6)(5,0)(6.46,0.79)
+\pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](5.62,2.56)(9.7,2.54)(6.46,0.79)
+\psline(5.62,2.56)(9.7,2.54)
+\psline(9.7,2.54)(5,0)
+\psline(5,0)(4,6)
+\psline(4,6)(5.62,2.56)
+\psline[linecolor=zzttqq](4,6)(5,0)
+\psline[linecolor=zzttqq](5,0)(6.46,0.79)
+\psline[linecolor=zzttqq](6.46,0.79)(4,6)
+\psline[linecolor=zzttqq](5.62,2.56)(9.7,2.54)
+\psline[linecolor=zzttqq](9.7,2.54)(6.46,0.79)
+\psline[linestyle=dashed,dash=3pt 3pt,linecolor=zzttqq](6.46,0.79)(5.62,2.56)
+\psline{->}(0,0)(11,0)
+\psline{->}(0,0)(0,6.8)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](5.62,2.56)
+\rput[bl](5.67,2.64){\blue{$A_3$}}
+\psdots[dotstyle=*,linecolor=blue](9.7,2.54)
+\rput[bl](9.76,2.61){\blue{$A_4$}}
+\psdots[dotstyle=*,linecolor=blue](5,0)
+\rput[bl](5.05,0.07){\blue{$A_1$}}
+\psdots[dotstyle=*,linecolor=blue](4,6)
+\rput[bl](4.05,6.08){\blue{$A_2$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.07){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=xdxdff](11,0)
+\rput[bl](11.05,0.07){\xdxdff{$X$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0,6.8)
+\rput[bl](0.05,6.83){\xdxdff{$Y$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+而当曲线是自交的四边形时,如下两图所示.在下面第一幅图中,$GF=GD,GC=GE$,
+在下面第二幅图中,$GA=GF,GB=GE$.经过观察,我们发现,当曲线 $C$ 是自交的四
+边形时,通过作辅助线,构造中心对称的三角形,题目中的结论仍然成立.或者,更
+直接地,由于当 $C$ 是自交四边形时,其实都可以看成两个三角形,这两个三角形
+只交于一点,而对于每个三角形来说,题目中的结论都成立,因此当曲线是自交的
+四边形时,题目中的结论亦成立.
+\begin{center}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.83,-1.48)(17.52,6.7)
+\psline(2.51,5.72)(10.3,3.86)
+\psline(10.3,3.86)(4.92,1.72)
+\psline(4.92,1.72)(11,0)
+\psline(11,0)(2.51,5.72)
+\psline(3.66,4.95)(9.08,3.38)
+\psline{->}(0,0)(12,0)
+\psline{->}(0,0)(0,6.38)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.51,5.72)
+\rput[bl](2.57,5.8){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](10.3,3.86)
+\rput[bl](10.36,3.95){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](4.92,1.72)
+\rput[bl](4.97,1.8){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](11,0)
+\rput[bl](11.06,0.08){\blue{$D$}}
+\psdots[dotstyle=*,linecolor=xdxdff](9.08,3.38)
+\rput[bl](9.14,3.46){\xdxdff{$E$}}
+\psdots[dotstyle=*,linecolor=xdxdff](3.66,4.95)
+\rput[bl](3.71,5.03){\xdxdff{$F$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.08){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=xdxdff](12,0)
+\rput[bl](12.05,0.08){\xdxdff{$X$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0,6.38)
+\rput[bl](0.05,6.46){\xdxdff{$Y$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.14,2.6)
+\rput[bl](7.19,2.68){\darkgray{$G$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+\begin{center}
+\newrgbcolor{xdxdff}{0.49 0.49 1}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-0.83,-1.48)(17.52,6.7)
+\psline(2.51,5.72)(10.3,3.86)
+\psline(10.3,3.86)(2.5,0.47)
+\psline(2.5,0.47)(11,0)
+\psline(11,0)(2.51,5.72)
+\psline{->}(0,0)(12,0)
+\psline{->}(0,0)(0,6.38)
+\psline(7.24,2.53)(12.2,-0.8)
+\psline(4.15,1.18)(12.2,-0.8)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](2.51,5.72)
+\rput[bl](2.57,5.8){\blue{$A$}}
+\psdots[dotstyle=*,linecolor=blue](10.3,3.86)
+\rput[bl](10.36,3.95){\blue{$B$}}
+\psdots[dotstyle=*,linecolor=blue](2.5,0.47)
+\rput[bl](2.55,0.55){\blue{$C$}}
+\psdots[dotstyle=*,linecolor=blue](11,0)
+\rput[bl](11.06,0.08){\blue{$D$}}
+\psdots[dotstyle=*,linecolor=darkgray](0,0)
+\rput[bl](0.05,0.08){\darkgray{$O$}}
+\psdots[dotstyle=*,linecolor=xdxdff](12,0)
+\rput[bl](12.05,0.08){\xdxdff{$X$}}
+\psdots[dotstyle=*,linecolor=xdxdff](0,6.38)
+\rput[bl](0.05,6.46){\xdxdff{$Y$}}
+\psdots[dotstyle=*,linecolor=darkgray](7.24,2.53)
+\rput[bl](7.3,2.62){\darkgray{$G$}}
+\psdots[dotstyle=*,linecolor=xdxdff](4.15,1.18)
+\rput[bl](4.21,1.26){\xdxdff{$E$}}
+\psdots[dotstyle=*,linecolor=blue](12.2,-0.8)
+\rput[bl](12.25,-0.72){\blue{$F$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{center}
+对于平面内的任意封闭折线来说,都可以分解成有限个三角形,因此对于平面内的
+任意封闭折线来说,题目中的结论都成立.而光滑曲线 $C$ 可以被封闭折线不断
+逼近,因此对于光滑曲线 $C$ 来说,题目中的结论也成立.
+\end{proof}
+% ----------------------------------------------------------------------------------------
+\end{document}
+
+
+
+
+
+
+
+

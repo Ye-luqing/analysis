@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{pstricks-add}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+\usepackage{xeCJK}
+\newtheorem*{theo}{定理}
+\newtheorem*{exe}{题目}
+\newtheorem*{rem}{评论}
+\newtheorem*{lemma}{引理}
+\newtheorem*{coro}{推论}
+\newtheorem*{exa}{例}
+\newenvironment{corollary}
+{\bigskip\begin{mdframed}\begin{coro}}
+    {\end{coro}\end{mdframed}\bigskip}
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}\begin{theo}}
+    {\end{theo}\end{mdframed}\bigskip}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}\begin{exe}}
+    {\end{exe}\end{mdframed}\bigskip}
+\newenvironment{example}
+{\bigskip\begin{mdframed}\begin{exa}}
+    {\end{exa}\end{mdframed}\bigskip}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}\begin{rem}}
+    {\end{rem}\end{mdframed}\bigskip}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+\newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+\newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+\newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+\newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+\newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+\newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+\newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+\newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+\newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+\renewcommand\refname{参考文献}\renewcommand\figurename{图}
+\usepackage[]{caption2} 
+\renewcommand{\captionlabeldelim}{}
+\setlength\parindent{0pt}
+\begin{document}
+\title{\bf{计算$\displaystyle\int_0^{+\infty}\frac{1}{1+x^n}dx$}} \author{\small{叶卢庆\footnote{叶卢庆(1992---),男,杭州师范大学理学院数学与应用数学专业本科在读,E-mail:yeluqingmathematics@gmail.com}}}
+\maketitle
+这是2015年中国科学技术大学数学分析的一道考研题目.我在考场上没能做完,现
+在继续做.
+\begin{exercise}[2015年中国科学技术大学数学分析考研题]
+计算
+$$
+\int_0^{+\infty}\frac{1}{1+x^n}dx.
+$$
+\end{exercise}
+\begin{proof}[\textbf{解}]
+将$x^n+1$在复数域上因式分解,可得
+$$
+\frac{1}{1+x^n}=\frac{1}{(x-e^{\frac{\pi i}{n}})(x-e^{\frac{\pi
+      i}{n}+\frac{2\pi i}{n}})\cdots (x-e^{\frac{\pi i}{n}+\frac{2\pi i}{n}(n-1)})}.
+$$
+设
+\begin{align*}
+  \frac{1}{(x-e^{\frac{\pi i}{n}})(x-e^{\frac{\pi
+      i}{n}+\frac{2\pi i}{n}})\cdots (x-e^{\frac{\pi i}{n}+\frac{2\pi
+      i}{n}(n-1)})}&=\frac{A_0}{x-e^{\frac{\pi
+      i}{n}}}+\frac{A_1}{x-e^{\frac{\pi i}{n}+\frac{2\pi
+      i}{n}}}+\cdots+\frac{A_{n-1}}{x-e^{\frac{2\pi i}{n}+\frac{2\pi i}{n}(n-1)}},
+\end{align*}
+可得
+\end{proof}
+\end{document}

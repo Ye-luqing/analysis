@@ -1,0 +1,166 @@
+\documentclass[a4paper, 12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\usepackage{amsmath,amsfonts,bm}
+\usepackage{hyperref,verbatim}
+\usepackage{amsthm,epigraph} 
+\usepackage{amssymb}
+\usepackage{framed,mdframed}
+\usepackage{graphicx,color} 
+\usepackage{mathrsfs,xcolor} 
+\usepackage[all]{xy}
+\usepackage{fancybox} 
+% \usepackage{xeCJK}
+\usepackage{CJKutf8}
+\newtheorem*{adtheorem}{定理}
+% \setCJKmainfont[BoldFont=FZYaoTi,ItalicFont=FZYaoTi]{FZYaoTi}
+\definecolor{shadecolor}{rgb}{1.0,0.9,0.9} %背景色为浅红色
+\newenvironment{theorem}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{adtheorem}}
+    {\end{adtheorem}\end{mdframed}\bigskip}
+\newtheorem*{bdtheorem}{定义}
+\newenvironment{definition}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{bdtheorem}}
+    {\end{bdtheorem}\end{mdframed}\bigskip}
+\newtheorem*{cdtheorem}{习题}
+\newenvironment{exercise}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{cdtheorem}}
+    {\end{cdtheorem}\end{mdframed}\bigskip}
+\newtheorem*{ddtheorem}{注}
+\newenvironment{remark}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{ddtheorem}}
+    {\end{ddtheorem}\end{mdframed}\bigskip}
+\newtheorem*{edtheorem}{引理}
+\newenvironment{lemma}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{edtheorem}}
+    {\end{edtheorem}\end{mdframed}\bigskip}
+\newtheorem*{pdtheorem}{例}
+\newenvironment{example}
+{\bigskip\begin{mdframed}[backgroundcolor=gray!40,rightline=false,leftline=false,topline=false,bottomline=false]\begin{pdtheorem}}
+    {\end{pdtheorem}\end{mdframed}\bigskip}
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title
+  % and author name here, see the TITLE block
+  % below
+  \renewcommand\refname{参考文献}
+  \newcommand{\D}{\displaystyle}\newcommand{\ri}{\Rightarrow}
+  \newcommand{\ds}{\displaystyle} \renewcommand{\ni}{\noindent}
+  \newcommand{\pa}{\partial} \newcommand{\Om}{\Omega}
+  \newcommand{\om}{\omega} \newcommand{\sik}{\sum_{i=1}^k}
+  \newcommand{\vov}{\Vert\omega\Vert} \newcommand{\Umy}{U_{\mu_i,y^i}}
+  \newcommand{\lamns}{\lambda_n^{^{\scriptstyle\sigma}}}
+  \newcommand{\chiomn}{\chi_{_{\Omega_n}}}
+  \newcommand{\ullim}{\underline{\lim}} \newcommand{\bsy}{\boldsymbol}
+  \newcommand{\mvb}{\mathversion{bold}} \newcommand{\la}{\lambda}
+  \newcommand{\La}{\Lambda} \newcommand{\va}{\varepsilon}
+  \newcommand{\be}{\beta} \newcommand{\al}{\alpha}
+  \newcommand{\dis}{\displaystyle} \newcommand{\R}{{\mathbb R}}
+  \newcommand{\N}{{\mathbb N}} \newcommand{\cF}{{\mathcal F}}
+  \newcommand{\gB}{{\mathfrak B}} \newcommand{\eps}{\epsilon}
+  \begin{flushright} % Right align
+    {\LARGE\@title} % Increase the font size of the title
+    
+    \vspace{50pt} % Some vertical space between the title and author name
+    
+    {\large\@author} % Author name
+    \\\@date % Date
+    
+    \vspace{40pt} % Some vertical space between the author block and abstract
+  \end{flushright}
+}
+
+% ----------------------------------------------------------------------------------------
+%	TITLE
+% ----------------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gkai}
+  \title{\textbf{定理18.1}} 
+  % \setlength\epigraphwidth{0.7\linewidth}
+  \author{\small{叶卢庆}\\{\small{杭州师范大学理学院,学号:1002011005}}\\{\small{Email:h5411167@gmail.com}}} % Institution
+  \renewcommand{\today}{\number\year. \number\month. \number\day}
+  \date{\today} % Date
+  
+  % ----------------------------------------------------------------------------------------
+  
+  
+  \maketitle % Print the title section
+  
+  % ----------------------------------------------------------------------------------------
+  %	ABSTRACT AND KEYWORDS
+  % ----------------------------------------------------------------------------------------
+  
+  % \renewcommand{\abstractname}{摘要} % Uncomment to change the name of the abstract to something else
+  
+  % \begin{abstract}
+  
+  % \end{abstract}
+  
+  % \hspace*{3,6mm}\textit{关键词:}  % Keywords
+  
+  % \vspace{30pt} % Some vertical space between the abstract and first section
+  
+  % ----------------------------------------------------------------------------------------
+  %	ESSAY BODY
+  % ----------------------------------------------------------------------------------------
+  \begin{theorem}[Weierstrass 判别法]
+设有函数 $F(x)$,使得
+$$
+|f(x,y)|\leq F(x),a\leq x<+\infty,c\leq y\leq d,
+$$
+如果积分
+$$
+\int_a^{+\infty}F(x)dx
+$$
+收敛,那么 $\int_a^{+\infty}f(x,y)dx$ 关于 $y$ 在 $[c,d]$ 上一致收敛.    
+  \end{theorem}
+  \begin{proof}[证明]
+积分
+$$
+\int_a^{+\infty}F(x)dx
+$$
+收敛,说明对于任意给定的正实数 $\va$,都存在相应的实数 $M>a$,使得对于任
+意的 $p,q>M$,都有
+$$
+|\int_p^{q}F(x)dx|<\va.
+$$
+因此,$\forall y\in [c,d]$,我们有
+$$
+|\int_p^{q}f(x,y)dx|<\va.
+$$
+$M$ 只与 $\va$ 有关,而与 $y$ 的取值无关.因此结论成立.
+  \end{proof}
+  \begin{remark}
+    我们将积分版本的 Weierstrass 判别法与级数版的 Weierstrass 判别法进
+    行对比.级数版的Weierstrass 判别法如下:
+    \begin{shaded}
+若对充分大的 $n$,恒有实数 $a_n$,使得 $|u_n(x)|\leq a_n$ 对 $X$ 上任意
+的 $x$ 都成立,并且数项级数 $\sum a_n$ 收敛,则 $\sum u_n(x)$ 在 $X$ 上
+一致收敛.      
+    \end{shaded}
+下面我们来说明这两者讲的是一件事.当我们把数列看作逐段常值函数的时
+候,该数列所有项按照先后顺序相加形成的级数就成了一个积分,此时,级数版的
+Weierstrass 判别法就成了积分版的 Weierstrass 判别法.\\
+
+而当我们把函数 $F(x)$ 的定义域进行越来越细致的分割的时候,我们也能从级数版
+本的 Weierstrass 判别法推出积分版本的 Weierstrass 判别法.
+  \end{remark}
+
+  % ----------------------------------------------------------------------------------------
+  %	BIBLIOGRAPHY
+  % ----------------------------------------------------------------------------------------
+  
+  \bibliographystyle{unsrt}
+  
+  \bibliography{sample}
+  
+  % ----------------------------------------------------------------------------------------
+\end{CJK}
+\end{document}
