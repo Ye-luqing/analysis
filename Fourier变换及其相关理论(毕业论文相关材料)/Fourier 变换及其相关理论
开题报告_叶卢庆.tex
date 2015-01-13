@@ -35,44 +35,103 @@
 \begin{frame}
   \frametitle{研究的基本内容和拟解决的问题}
   \begin{itemize}
-\item Fourier分析早期历史.包括Euler,d'Alembert,Lagrange,Fourier等人的贡献.特别要参考
-  Fourier的著作《热的解析理论》.\pause
-\item 探究线性代数的相关理论和Fourier分析理论的紧密联系.\pause
-\item Fourier分析与微分方程.以及离散Fourier分析与差分方程.\pause
-\item Fourier分析与等周问题(Hurwitz).\pause
-\item 探究为什么通过离散Fourier变换能导出四次以及四次以下方程的根式解(Lagrange).同样
-  的变换对于五次方程为什么会失效.\pause
-\item Fourier分析在弦振动,$n$个自由度系统的微振动,热传导等物理问题中的
-  应用.\pause
-\item 以上内容并不是孤立地叙述,而是互相联系,形成一个有机的整体.
+\item 研究Fourier分析的早期历史.古希腊的Ptolemy为了解释行星运
+  动中出现的逆行等不规则现象而创造的“本轮”和“均轮”学说,颇有Fourier分析的味道.后来正式的
+  发展里出现了Euler,d'Alembert,Daniel Bernoulli,Lagrange,Fourier,Dirichlet,Abel,……等
+  一长串光辉的名字.可以说,Fourier分析深刻地主导和影响了19世纪和20世纪分析学
+  的发展.特别要参考Fourier的著作,是他把这门学科发扬光大.\pause
+\item 探究线性代数的相关理论,比如酉变换,最小二乘法,特征值和Fourier分析理论的
+  紧密联系.\pause
+\item Fourier分析和微分方程的联系.以及相应的离散Fourier分析与差分方程
+  的联系.\pause
+\item 离散Fourier分析与多边形之间的关系.以及Fourier分析解等周问题(Hurwitz).
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{研究的基本内容和拟解决的问题}
+\begin{itemize}
+  \item 学习与探究为什么通过离散Fourier变换能导出四次以及四次以下方程的根式解(Lagrange).同样
+  的变换对于五次方程为什么会失效.
+\end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{研究的基本内容和拟解决的问题}
+      \begin{exam}
+$x^3+ax^2+bx+c=0$的三个根$x_1,x_2,x_3$满足关系式
+\begin{equation}\label{eq:1}
+\begin{cases}
+  x_1+x_2+x_3=-a\\
+x_1x_2+x_2x_3+x_3x_1=b\\
+x_1x_2x_3=-c
+\end{cases},
+\end{equation}
+$\omega=e^{\frac{2\pi i}{3}}$.三个根经过离散Fourier 变换
+$$
+\begin{pmatrix}
+  r_{1}\\
+r_{2}\\
+r_{3}\\
+\end{pmatrix}=
+\begin{pmatrix}
+  1&1&1\\
+1&\omega&\omega^{2}\\
+1&\omega^{2}&\omega
+\end{pmatrix}
+\begin{pmatrix}
+  x_1\\
+x_2\\
+x_3
+\end{pmatrix}
+$$
+后,结合方程\eqref{eq:1},能很容易求出$r_1,r_2,r_3$,再通过离散Fourier逆变换,便能求出
+$x_1,x_2,x_3$.这很神奇,到底是为什么?
+  \end{exam}
+\end{frame}
+\begin{frame}
+  \frametitle{研究的基本内容和拟解决的问题}
+  \begin{itemize}
+  \item 学习与研究 Fourier 分析在弦振动,热传导,$n$个自由度的系统的微振动等物理问
+    题中的应用.
   \end{itemize}
 \end{frame}
 \begin{frame}
   \frametitle{研究方法及措施}
 \begin{itemize}
-\item  看书,上网查阅相关资料和文献.记录笔记和感悟.最后整理成文.
+\item  看书,上网查阅相关资料和文献.思考.记录笔记和感悟.最后整理成文.\pause
+\item 我想论述的问题并不是孤立的.它们之间存在有机的联系.比
+  如,Fourier分析,微分方程,积分方程会和相关的物理问题,以及线性代数理
+  论有紧密关联.在介绍Fourier分析的历史的时候,也不会只是蜻蜓点水走马观
+  花一般地介绍其历史,更不会提及有关历史人物的人生际遇和生活琐事,而是尽
+  量和数学理论结合在一起阐述,使得数学的历史和数学理论相得益彰.因此我的研究方
+  法就是注重各个主题之间的联系.估计会遇到的困难是,心有余而时间和能力不足.因此,会量力而行.时间若足
+  够,就多写一点.时间若不够,就少写一点.
 \end{itemize}
 \end{frame}
 \begin{frame}
   \frametitle{研究工作的步骤与进度}
   \begin{itemize}
-  \item 在必须上交论文的倒数第二个星期撰写好论文,并交由导师审阅.在此之前,一直看书,写笔
+  \item 在上交论文的倒数第二个星期撰写好论文,并交由导师审阅.在此之前,一直看书,写笔
     记.
   \end{itemize}
 \end{frame}
 \begin{frame}
   \frametitle{主要参考文献}
   \begin{itemize}
-\item [1] Elias M. Stein,Rami Shakarchi.Fourier Analysis.Princeton University Press,2003.
-  \item [2] 陶哲轩. 王昆扬译.陶哲轩实分析[M].第1版.北京:人民邮电出版
+\item  Elias M. Stein,Rami Shakarchi.Fourier Analysis[M].Princeton
+  University Press,2003.
+\item Geogi P.Tolstov.Fourier Series[M].New York:Dover Publication.
+\item Joseph Fourier.桂质亮译.热的解析理论[M].北京:北京大学出版
+  社,2008
+\item Richard Courant.朱言钧译.柯氏微积分学[M].上海:中华书局,1952.
+\item  陶哲轩. 王昆扬译.陶哲轩实分析[M].北京:人民邮电出版
     社,2008.
-\item [3]M.Klein.张理京,张锦炎等译.古今数学思想.第1版.上海:上海科学技
+\item 福田武雄.穆鸿基译.差分方程[M].上海:上海科学技术出版社,1981.
+\item M.Klein.张理京,张锦炎等译.古今数学思想[M].上海:上海科学技
   术出版社,2009.
-\item [4]吴大猷.古典动力学[M].第1版.北京:科学出版社,1983.
-\item [5]Joseph Fourier.桂质亮译.热的解析理论.第1版.北京:北京大学出版
-  社,2008.
+\item Harold M. Edwards.Galois theory[M].Springer,1984.
+\item 吴大猷.古典动力学[M].北京:科学出版社,1983.
+\item A.P.French.徐绪笃译.振动与波.北京:人民教育出版社,1981.
   \end{itemize}
-等等.参考文献现在还没定型.得我论文写完后才知道具体参考了什么.
 \end{frame}
 \begin{frame}
   \frametitle{END}
